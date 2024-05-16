@@ -18,7 +18,6 @@ def process_log_file(log_file_path, output_dir):
     # Extracting Test Configuration
     mac_phy_config_pattern = re.compile(r"\[MAC Configuration\](.*?)\[PHY Configuration\](.*?)--", re.DOTALL)
     mac_phy_config_match = mac_phy_config_pattern.search(log_content)
-
     mcs = bandwidth = frequency = rate_control = guard_interval = tx_gain = None
 
     if mac_phy_config_match:
@@ -68,7 +67,7 @@ def process_log_file(log_file_path, output_dir):
 
         # Extracting summary data
         summary_pattern = re.compile(
-             r"\[\s*\d+\]\s+\d+\.\d+-\d+\.\d+\s+sec\s+\d+\.\d+\s+\w*Bytes\s+(\d+\.\d+)\s+(K|M|bits/sec)\s+(\d+\.\d+)\s+ms\s+(\d+)/(\d+)\s+\((\d+\.?\d*)%\)\s+(sender|receiver)"
+            r"\[\s*\d+\]\s+\d+\.\d+-\d+\.\d+\s+sec\s+[\d\.]+\s+\w*Bytes\s+([\d\.]+)\s+(K|M|)bits/sec\s+([\d\.]+)\s+ms\s+(\d+)/(\d+)\s+\(([\d\.]+)%\)\s+(sender|receiver)"
         )
         summary_match = summary_pattern.findall(iperf3_results)
         for match in summary_match:
