@@ -1,63 +1,4 @@
 Starting Network Test Collection...
-Timestamp: Wed 08 May 2024 05:58:24 AM CEST
-iperf3 Server IP: 192.168.200.1
-iperf3 Test Duration: 60 seconds
-Ping Packet Count: 60
-\n Running ping test with 60 packets...
-
-*** Ping Test ***
-PING 192.168.200.1 (192.168.200.1) 100(128) bytes of data.
-From 169.254.65.175 icmp_seq=6 Destination Host Unreachable
-From 169.254.65.175 icmp_seq=7 Destination Host Unreachable
-From 169.254.65.175 icmp_seq=8 Destination Host Unreachable
-From 169.254.65.175 icmp_seq=9 Destination Host Unreachable
-From 169.254.65.175 icmp_seq=10 Destination Host Unreachable
-From 169.254.65.175 icmp_seq=11 Destination Host Unreachable
-Running iperf3 test for 60 seconds...
-
-*** iperf3 Test ***
-\n Running CLI test...
----------------------------------------------------
-[MAC Configuration]
-Device Mode			 : STA
-MAC Address			 : 00:c0:ca:b4:65:2e
-Country				 : DE
-Bandwidth			 : 2M
-Frequency			 : 8640
-MAC80211_freq			 : 5205
-Rate Control			 : ON
- -MCS				 : 7
- -bw				 : 2 Mhz (NRC Auto)
-Guard Interval			 : LONG
-Security			 : OFF
-RTS				 : OFF
-RTS threshold			 : 0
-Format				 : S1G
-Preamble type			 : S1G_SHORT
-Promiscuous Mode		 : OFF
-color				 : 0x0
-Auto CFO Cal			 : OFF
-BSSID				 : 00:c0:ca:b4:65:38
-AID				 : 1
-
-[PHY Configuration]
-TX_Gain				 : 14
-RX_Gain				 : 82
-
-Tx Power			 : 14
----------------------------------------------------
-OK
-spawn ./cli_app
-===================================================
-     Newracom Command Line Application (2.10)      
-===================================================
-NRC> show signal start 1 15
-OK
-NRC> Mac Addr : 00:c0:ca:b4:65:38	rssi: 0  	snr: 0
-
-
-Network test collection completed.
-Starting Network Test Collection...
 Timestamp: Wed 08 May 2024 05:58:50 AM CEST
 iperf3 Server IP: 192.168.200.1
 iperf3 Test Duration: 60 seconds
@@ -92,7 +33,7 @@ PING 192.168.200.1 (192.168.200.1) 100(128) bytes of data.
 108 bytes from 192.168.200.1: icmp_seq=60 ttl=64 time=28.8 ms
 
 --- 192.168.200.1 ping statistics ---
-60 packets transmitted, 24 received, 60% packet loss, time 60514ms
+60 packets transmitted, 24 received, +0 errors, 60% packet loss, time 60514ms
 rtt min/avg/max/mdev = 8.974/39.992/178.714/38.816 ms
 Running iperf3 test for 60 seconds...
 
