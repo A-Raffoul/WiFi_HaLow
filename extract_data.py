@@ -153,7 +153,7 @@ script_dir = os.path.dirname(os.path.abspath(__file__))
 log_files_dir = os.path.join(script_dir, 'indoor_test')
 
 # Directory to save the output CSV files
-output_dir = os.path.join(script_dir, 'output_csvs')
+output_dir = os.path.join(script_dir, 'data/indoor')
 os.makedirs(output_dir, exist_ok=True)
 
 # Iterate over all files in the log files directory
