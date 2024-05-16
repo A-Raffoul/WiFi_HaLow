@@ -4,7 +4,15 @@ import os
 
 # Function to process a single log file and save it as a CSV
 def process_log_file(log_file_path, output_dir):
-    test_name = os.path.splitext(os.path.basename(log_file_path))[0]  # Use file name as test name
+
+    base_name = os.path.splitext(os.path.basename(log_file_path))[0]
+
+    # Split the base name by underscores
+    parts = base_name.split('_')
+
+    # Join the first two parts to form the desired test name
+    test_name = '_'.join(parts[:2])
+
     try:
         with open(log_file_path, 'r') as file:
             log_content = file.read()

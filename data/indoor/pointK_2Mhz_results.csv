@@ -1,5 +1,5 @@
 Test Name,MCS,Bandwidth,Frequency,Rate Control,Guard Interval,Tx Gain,Packet Size,Packets Transmitted,Packets Received,Packet Loss (%),Ping Sequence,Ping Time (ms),Test Length (seconds),Receiver Bit Rate,Jitter,Receiver Lost/Total Datagrams,Receiver BER (%),Iperf Second,Iperf Bitrate (Mbits/sec),RSSI Sequence Index,RSSI,SNR
-pointK_2Mhz_test08_0558,0,2M,8640,ON,LONG,14,108.0,60,24.0,,1,111,,,,,,,,1.0,-101.0,2.0
+pointK_2Mhz,0,2M,8640,ON,LONG,14,108.0,60,24.0,,1,111,,,,,,,,1.0,-101.0,2.0
 ,,,,,,,,,,,2,75.0,,,,,,,,2.0,-101.0,2.0
 ,,,,,,,,,,,3,12.0,,,,,,,,3.0,-102.0,0.0
 ,,,,,,,,,,,4,31.9,,,,,,,,4.0,-101.0,0.0

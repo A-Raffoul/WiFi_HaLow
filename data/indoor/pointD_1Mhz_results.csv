@@ -1,5 +1,5 @@
 Test Name,MCS,Bandwidth,Frequency,Rate Control,Guard Interval,Tx Gain,Packet Size,Packets Transmitted,Packets Received,Packet Loss (%),Ping Sequence,Ping Time (ms),Test Length (seconds),Receiver Bit Rate,Jitter,Receiver Lost/Total Datagrams,Receiver BER (%),Iperf Second,Iperf Bitrate (Mbits/sec),RSSI Sequence Index,RSSI,SNR
-pointD_1Mhz_test08_0454,2,1M,8635,ON,LONG,14,108.0,60,55.0,8.33333,1.0,43.8,60.0,0.565,31.366,276/3260,8.5,1,1.16,1.0,0.0,0.0
+pointD_1Mhz,2,1M,8635,ON,LONG,14,108.0,60,55.0,8.33333,1.0,43.8,60.0,0.565,31.366,276/3260,8.5,1,1.16,1.0,0.0,0.0
 ,,,,,,,,,,,2.0,15.9,,,,,,2,0.579,2.0,-56.0,4.0
 ,,,,,,,,,,,3.0,28.9,,,,,,3,0.579,3.0,-97.0,8.0
 ,,,,,,,,,,,4.0,8.94,,,,,,4,0.695,4.0,-96.0,9.0
