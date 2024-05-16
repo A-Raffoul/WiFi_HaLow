@@ -11,7 +11,7 @@ def process_log_file(log_file_path, output_dir):
     parts = base_name.split('_')
 
     # Join the first two parts to form the desired test name
-    test_name = '_'.join(parts[:2])
+    test_name = '_'.join(parts[:2]) + '_indoor'
 
     try:
         with open(log_file_path, 'r') as file:
