@@ -16,7 +16,7 @@ try:
     with open(log_file_path, 'r') as file:
         # Process the file
         data = file.read()
-        print(data)
+        # print(data)
 except FileNotFoundError:
     print(f"File not found: {log_file_path}")
 except Exception as e:
@@ -135,7 +135,11 @@ csv_data = {
 
 # Converting to a DataFrame for CSV output
 csv_df = pd.DataFrame({key: pd.Series(value) for key, value in csv_data.items()})
-csv_file_path = 'test_results.csv'
+
+# Save the DataFrame to a CSV file
+file_name = f"{test_name}_results.csv"
+csv_file_path = os.path.join('data/indoor', file_name)
+# csv_file_path = 'data/test_results.csv'
 csv_df.to_csv(csv_file_path, index=False)
 
 print(f"CSV file created at: {csv_file_path}")
