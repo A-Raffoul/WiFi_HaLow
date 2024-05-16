@@ -1,0 +1,147 @@
+Starting Network Test Collection...
+Timestamp: Wed 08 May 2024 05:22:29 AM CEST
+iperf3 Server IP: 192.168.200.1
+iperf3 Test Duration: 30 seconds
+Ping Packet Count: 20
+\n Running ping test with 20 packets...
+
+*** Ping Test ***
+PING 192.168.200.1 (192.168.200.1) 100(128) bytes of data.
+108 bytes from 192.168.200.1: icmp_seq=1 ttl=64 time=6.87 ms
+108 bytes from 192.168.200.1: icmp_seq=2 ttl=64 time=5.85 ms
+108 bytes from 192.168.200.1: icmp_seq=3 ttl=64 time=4.91 ms
+108 bytes from 192.168.200.1: icmp_seq=4 ttl=64 time=6.84 ms
+108 bytes from 192.168.200.1: icmp_seq=5 ttl=64 time=7.87 ms
+108 bytes from 192.168.200.1: icmp_seq=6 ttl=64 time=4.93 ms
+108 bytes from 192.168.200.1: icmp_seq=7 ttl=64 time=14.8 ms
+108 bytes from 192.168.200.1: icmp_seq=8 ttl=64 time=4.95 ms
+108 bytes from 192.168.200.1: icmp_seq=9 ttl=64 time=4.96 ms
+108 bytes from 192.168.200.1: icmp_seq=10 ttl=64 time=4.90 ms
+108 bytes from 192.168.200.1: icmp_seq=11 ttl=64 time=4.93 ms
+108 bytes from 192.168.200.1: icmp_seq=12 ttl=64 time=5.94 ms
+108 bytes from 192.168.200.1: icmp_seq=13 ttl=64 time=4.93 ms
+108 bytes from 192.168.200.1: icmp_seq=14 ttl=64 time=7.93 ms
+108 bytes from 192.168.200.1: icmp_seq=15 ttl=64 time=4.94 ms
+108 bytes from 192.168.200.1: icmp_seq=16 ttl=64 time=4.94 ms
+
+--- 192.168.200.1 ping statistics ---
+20 packets transmitted, 16 received, 20% packet loss, time 19180ms
+rtt min/avg/max/mdev = 4.900/6.281/14.817/2.442 ms
+Running iperf3 test for 30 seconds...
+
+*** iperf3 Test ***
+\n Running CLI test...
+---------------------------------------------------
+[MAC Configuration]
+Device Mode			 : STA
+MAC Address			 : 00:c0:ca:b4:65:2e
+Country				 : DE
+Bandwidth			 : 1M
+Frequency			 : 8635
+MAC80211_freq			 : 5180
+Rate Control			 : ON
+ -MCS				 : 7
+ -bw				 : 1 Mhz (NRC Auto)
+Guard Interval			 : LONG
+Security			 : OFF
+RTS				 : OFF
+RTS threshold			 : 0
+Format				 : S1G
+Preamble type			 : 1M
+Promiscuous Mode		 : OFF
+color				 : 0x0
+Auto CFO Cal			 : OFF
+BSSID				 : 00:c0:ca:b4:65:38
+AID				 : 1
+
+[PHY Configuration]
+TX_Gain				 : 14
+RX_Gain				 : 82
+
+Tx Power			 : 14
+---------------------------------------------------
+OK
+spawn ./cli_app
+===================================================
+     Newracom Command Line Application (2.10)      
+===================================================
+NRC> show signal start 1 15
+OK
+NRC> Mac Addr : 00:c0:ca:b4:65:38	rssi: -71  	snr: 27
+
+Mac Addr : 00:c0:ca:b4:65:38	rssi: -70  	snr: 27
+
+Mac Addr : 00:c0:ca:b4:65:38	rssi: -70  	snr: 26
+
+Mac Addr : 00:c0:ca:b4:65:38	rssi: -70  	snr: 27
+
+Mac Addr : 00:c0:ca:b4:65:38	rssi: -70  	snr: 27
+
+Mac Addr : 00:c0:ca:b4:65:38	rssi: -69  	snr: 27
+
+Mac Addr : 00:c0:ca:b4:65:38	rssi: -70  	snr: 27
+
+Mac Addr : 00:c0:ca:b4:65:38	rssi: -71  	snr: 27
+
+Mac Addr : 00:c0:ca:b4:65:38	rssi: -71  	snr: 27
+
+Mac Addr : 00:c0:ca:b4:65:38	rssi: -71  	snr: 27
+
+Mac Addr : 00:c0:ca:b4:65:38	rssi: -71  	snr: 28
+
+Mac Addr : 00:c0:ca:b4:65:38	rssi: -68  	snr: 27
+
+Mac Addr : 00:c0:ca:b4:65:38	rssi: -68  	snr: 28
+
+Mac Addr : 00:c0:ca:b4:65:38	rssi: -70  	snr: 28
+
+Mac Addr : 00:c0:ca:b4:65:38	rssi: -70  	snr: 28
+
+--------------------------------------------------
+[MAC Addr]: 00:c0:ca:b4:65:38
+[Total]   : 15
+[RSSI]
+ average  : -70.000
+ std_dev  : 0.966
+[SNR]
+ average  : 27.200
+ std_dev  : 0.542
+--------------------------------------------------
+NRC>
+show config 
+exit
+---------------------------------------------------
+[MAC Configuration]
+Device Mode			 : STA
+MAC Address			 : 00:c0:ca:b4:65:2e
+Country				 : DE
+Bandwidth			 : 1M
+Frequency			 : 8635
+MAC80211_freq			 : 5180
+Rate Control			 : ON
+ -MCS				 : 7
+ -bw				 : 1 Mhz (NRC Auto)
+Guard Interval			 : LONG
+Security			 : OFF
+RTS				 : OFF
+RTS threshold			 : 0
+Format				 : S1G
+Preamble type			 : 1M
+Promiscuous Mode		 : OFF
+color				 : 0x0
+Auto CFO Cal			 : OFF
+BSSID				 : 00:c0:ca:b4:65:38
+AID				 : 1
+
+[PHY Configuration]
+TX_Gain				 : 14
+RX_Gain				 : 82
+
+Tx Power			 : 14
+---------------------------------------------------
+OK
+NRC> ===================================================
+      Exit Newracom Command Line Application       
+===================================================
+
+Network test collection completed.

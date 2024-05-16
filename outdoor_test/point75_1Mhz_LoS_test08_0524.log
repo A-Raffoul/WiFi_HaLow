@@ -1,0 +1,190 @@
+Starting Network Test Collection...
+Timestamp: Wed 08 May 2024 05:24:11 AM CEST
+iperf3 Server IP: 192.168.200.1
+iperf3 Test Duration: 30 seconds
+Ping Packet Count: 20
+\n Running ping test with 20 packets...
+
+*** Ping Test ***
+PING 192.168.200.1 (192.168.200.1) 100(128) bytes of data.
+108 bytes from 192.168.200.1: icmp_seq=1 ttl=64 time=123 ms
+108 bytes from 192.168.200.1: icmp_seq=2 ttl=64 time=20.0 ms
+108 bytes from 192.168.200.1: icmp_seq=3 ttl=64 time=17.9 ms
+108 bytes from 192.168.200.1: icmp_seq=4 ttl=64 time=11.9 ms
+108 bytes from 192.168.200.1: icmp_seq=5 ttl=64 time=38.0 ms
+108 bytes from 192.168.200.1: icmp_seq=6 ttl=64 time=24.9 ms
+108 bytes from 192.168.200.1: icmp_seq=7 ttl=64 time=6.92 ms
+108 bytes from 192.168.200.1: icmp_seq=8 ttl=64 time=6.93 ms
+108 bytes from 192.168.200.1: icmp_seq=9 ttl=64 time=6.93 ms
+108 bytes from 192.168.200.1: icmp_seq=10 ttl=64 time=6.94 ms
+108 bytes from 192.168.200.1: icmp_seq=11 ttl=64 time=6.93 ms
+108 bytes from 192.168.200.1: icmp_seq=12 ttl=64 time=12.9 ms
+108 bytes from 192.168.200.1: icmp_seq=13 ttl=64 time=9.93 ms
+108 bytes from 192.168.200.1: icmp_seq=14 ttl=64 time=6.93 ms
+108 bytes from 192.168.200.1: icmp_seq=15 ttl=64 time=11.9 ms
+108 bytes from 192.168.200.1: icmp_seq=16 ttl=64 time=16.9 ms
+108 bytes from 192.168.200.1: icmp_seq=17 ttl=64 time=10.9 ms
+108 bytes from 192.168.200.1: icmp_seq=18 ttl=64 time=6.89 ms
+108 bytes from 192.168.200.1: icmp_seq=19 ttl=64 time=6.93 ms
+108 bytes from 192.168.200.1: icmp_seq=20 ttl=64 time=6.94 ms
+
+--- 192.168.200.1 ping statistics ---
+20 packets transmitted, 20 received, 0% packet loss, time 19020ms
+rtt min/avg/max/mdev = 6.891/18.044/123.056/25.304 ms
+Running iperf3 test for 30 seconds...
+
+*** iperf3 Test ***
+Connecting to host 192.168.200.1, port 5201
+[  5] local 192.168.200.23 port 38853 connected to 192.168.200.1 port 5201
+[ ID] Interval           Transfer     Bitrate         Total Datagrams
+[  5]   0.00-1.00   sec   141 KBytes  1.16 Mbits/sec  100  
+[  5]   1.00-2.00   sec  70.7 KBytes   579 Kbits/sec  50  
+[  5]   2.00-3.00   sec  70.7 KBytes   579 Kbits/sec  50  
+[  5]   3.00-4.00   sec  70.7 KBytes   579 Kbits/sec  50  
+[  5]   4.00-5.00   sec  70.7 KBytes   579 Kbits/sec  50  
+[  5]   5.00-6.00   sec  84.8 KBytes   695 Kbits/sec  60  
+[  5]   6.00-7.00   sec  84.8 KBytes   695 Kbits/sec  60  
+[  5]   7.00-8.00   sec  70.7 KBytes   579 Kbits/sec  50  
+[  5]   8.00-9.00   sec  56.6 KBytes   463 Kbits/sec  40  
+[  5]   9.00-10.00  sec  84.8 KBytes   695 Kbits/sec  60  
+[  5]  10.00-11.00  sec  28.3 KBytes   232 Kbits/sec  20  
+[  5]  11.00-12.00  sec  28.3 KBytes   232 Kbits/sec  20  
+[  5]  12.00-13.00  sec  56.6 KBytes   463 Kbits/sec  40  
+[  5]  13.00-14.00  sec  56.6 KBytes   463 Kbits/sec  40  
+[  5]  14.00-15.00  sec  42.4 KBytes   347 Kbits/sec  30  
+[  5]  15.00-16.00  sec  70.7 KBytes   579 Kbits/sec  50  
+[  5]  16.00-17.00  sec  42.4 KBytes   347 Kbits/sec  30  
+[  5]  17.00-18.00  sec  70.7 KBytes   579 Kbits/sec  50  
+[  5]  18.00-19.00  sec  56.6 KBytes   463 Kbits/sec  40  
+[  5]  19.00-20.00  sec  70.7 KBytes   579 Kbits/sec  50  
+[  5]  20.00-21.00  sec  70.7 KBytes   579 Kbits/sec  50  
+[  5]  21.00-22.00  sec  84.8 KBytes   695 Kbits/sec  60  
+[  5]  22.00-23.00  sec  84.8 KBytes   695 Kbits/sec  60  
+[  5]  23.00-24.00  sec  70.7 KBytes   579 Kbits/sec  50  
+[  5]  24.00-25.00  sec  84.8 KBytes   695 Kbits/sec  60  
+[  5]  25.00-26.00  sec  70.7 KBytes   579 Kbits/sec  50  
+[  5]  26.00-27.00  sec  70.7 KBytes   579 Kbits/sec  50  
+[  5]  27.00-28.00  sec  70.7 KBytes   579 Kbits/sec  50  
+[  5]  28.00-29.00  sec  84.8 KBytes   695 Kbits/sec  60  
+[  5]  29.00-30.00  sec  70.7 KBytes   579 Kbits/sec  50  
+- - - - - - - - - - - - - - - - - - - - - - - - -
+[ ID] Interval           Transfer     Bitrate         Jitter    Lost/Total Datagrams
+[  5]   0.00-30.00  sec  2.04 MBytes   571 Kbits/sec  0.000 ms  0/1480 (0%)  sender
+[  5]   0.00-31.14  sec  1.65 MBytes   446 Kbits/sec  28.962 ms  282/1480 (19%)  receiver
+
+iperf Done.
+\n Running CLI test...
+---------------------------------------------------
+[MAC Configuration]
+Device Mode			 : STA
+MAC Address			 : 00:c0:ca:b4:65:2e
+Country				 : DE
+Bandwidth			 : 1M
+Frequency			 : 8635
+MAC80211_freq			 : 5180
+Rate Control			 : ON
+ -MCS				 : 2
+ -bw				 : 1 Mhz (NRC Auto)
+Guard Interval			 : LONG
+Security			 : OFF
+RTS				 : OFF
+RTS threshold			 : 0
+Format				 : S1G
+Preamble type			 : 1M
+Promiscuous Mode		 : OFF
+color				 : 0x0
+Auto CFO Cal			 : OFF
+BSSID				 : 00:c0:ca:b4:65:38
+AID				 : 1
+
+[PHY Configuration]
+TX_Gain				 : 14
+RX_Gain				 : 82
+
+Tx Power			 : 14
+---------------------------------------------------
+OK
+spawn ./cli_app
+===================================================
+     Newracom Command Line Application (2.10)      
+===================================================
+NRC> show signal start 1 15
+OK
+NRC> Mac Addr : 00:c0:ca:b4:65:38	rssi: -94  	snr: 13
+
+Mac Addr : 00:c0:ca:b4:65:38	rssi: -98  	snr: 8
+
+Mac Addr : 00:c0:ca:b4:65:38	rssi: -97  	snr: 8
+
+Mac Addr : 00:c0:ca:b4:65:38	rssi: -97  	snr: 8
+
+Mac Addr : 00:c0:ca:b4:65:38	rssi: -98  	snr: 8
+
+Mac Addr : 00:c0:ca:b4:65:38	rssi: -98  	snr: 8
+
+Mac Addr : 00:c0:ca:b4:65:38	rssi: -99  	snr: 6
+
+Mac Addr : 00:c0:ca:b4:65:38	rssi: -100  	snr: 5
+
+Mac Addr : 00:c0:ca:b4:65:38	rssi: -99  	snr: 5
+
+Mac Addr : 00:c0:ca:b4:65:38	rssi: -99  	snr: 6
+
+Mac Addr : 00:c0:ca:b4:65:38	rssi: -99  	snr: 5
+
+Mac Addr : 00:c0:ca:b4:65:38	rssi: -99  	snr: 6
+
+Mac Addr : 00:c0:ca:b4:65:38	rssi: -99  	snr: 6
+
+Mac Addr : 00:c0:ca:b4:65:38	rssi: -99  	snr: 6
+
+Mac Addr : 00:c0:ca:b4:65:38	rssi: -98  	snr: 7
+
+--------------------------------------------------
+[MAC Addr]: 00:c0:ca:b4:65:38
+[Total]   : 15
+[RSSI]
+ average  : -98.200
+ std_dev  : 1.376
+[SNR]
+ average  : 7.000
+ std_dev  : 1.966
+--------------------------------------------------
+NRC>
+show config 
+exit
+---------------------------------------------------
+[MAC Configuration]
+Device Mode			 : STA
+MAC Address			 : 00:c0:ca:b4:65:2e
+Country				 : DE
+Bandwidth			 : 1M
+Frequency			 : 8635
+MAC80211_freq			 : 5180
+Rate Control			 : ON
+ -MCS				 : 4
+ -bw				 : 1 Mhz (NRC Auto)
+Guard Interval			 : LONG
+Security			 : OFF
+RTS				 : OFF
+RTS threshold			 : 0
+Format				 : S1G
+Preamble type			 : 1M
+Promiscuous Mode		 : OFF
+color				 : 0x0
+Auto CFO Cal			 : OFF
+BSSID				 : 00:c0:ca:b4:65:38
+AID				 : 1
+
+[PHY Configuration]
+TX_Gain				 : 14
+RX_Gain				 : 82
+
+Tx Power			 : 14
+---------------------------------------------------
+OK
+NRC> ===================================================
+      Exit Newracom Command Line Application       
+===================================================
+
+Network test collection completed.
