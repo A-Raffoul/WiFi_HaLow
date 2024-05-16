@@ -41,6 +41,8 @@ def read_csv_files(directory):
             'Jitter': df.loc[0, 'Jitter'],
             'Receiver BER (%)': df.loc[0, 'Receiver BER (%)'],
             'RSSI Sequence Index': df.loc[0, 'RSSI Sequence Index'],
+            # need to add distance
+            # median fixed value for RTT, RSSI, SNR, Throughput
         }
 
         # Extract lists of the measurements

@@ -3,7 +3,9 @@ import pandas as pd
 import os
 
 # Function to process a single log file and save it as a CSV
-def process_log_file(log_file_path, output_dir):
+# LOG file should look like this: PointX_XMhz_testxxx.log 
+
+def process_log_file(log_file_path, output_dir='data', type='test'):
 
     base_name = os.path.splitext(os.path.basename(log_file_path))[0]
 
@@ -11,7 +13,8 @@ def process_log_file(log_file_path, output_dir):
     parts = base_name.split('_')
 
     # Join the first two parts to form the desired test name
-    test_name = '_'.join(parts[:2]) + '_indoor'
+
+    test_name = '_'.join(parts[:2]) + '_'+ type
 
     try:
         with open(log_file_path, 'r') as file:
@@ -153,25 +156,53 @@ def process_log_file(log_file_path, output_dir):
 
     print(f"CSV file created at: {csv_file_path}")
 
-# Get the directory where the script is located
-script_dir = os.path.dirname(os.path.abspath(__file__))
+# ======================================================================================================================
 
-# Directory containing the log files
-log_files_dir = os.path.join(script_dir, 'indoor_test')
 
-# Directory to save the output CSV files
-output_dir = os.path.join(script_dir, 'data/indoor')
-os.makedirs(output_dir, exist_ok=True)
+# # Get the directory where the script is located
+# script_dir = os.path.dirname(os.path.abspath(__file__))
 
-# Iterate over all files in the log files directory
-for root, dirs, files in os.walk(log_files_dir):
-    for file in files:
-        if file.endswith('.log'):
-            file_path = os.path.join(root, file)
-            try:
-                process_log_file(file_path, output_dir)
-                print(f"Processed file: {file}")
-            except Exception as e:
-                print(f"An error occurred while processing {file}: {e}")
+# # Directory containing the log files
+# log_files_dir = os.path.join(script_dir, 'indoor_test')
 
-print("Success")
+# # Directory to save the output CSV files
+# output_dir = os.path.join(script_dir, 'data/indoor')
+# os.makedirs(output_dir, exist_ok=True)
+
+# # Iterate over all files in the log files directory
+# for root, dirs, files in os.walk(log_files_dir):
+#     for file in files:
+#         if file.endswith('.log'):
+#             file_path = os.path.join(root, file)
+#             try:
+#                 process_log_file(file_path, output_dir, type='indoor')
+#                 print(f"Processed file: {file}")
+#             except Exception as e:
+#                 print(f"An error occurred while processing {file}: {e}")
+
+# print("Success")
+
+
+def process_directory(log_files_dir, output_dir, type='test'):
+    # Get the directory where the script is located
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+
+    # Directory containing the log files
+    log_files_dir_abs = os.path.join(script_dir, log_files_dir)
+
+    # Directory to save the output CSV files
+    output_dir_abs = os.path.join(script_dir, output_dir)
+    os.makedirs(output_dir_abs, exist_ok=True)
+    # Iterate over all files in the log files directory
+    for root, dirs, files in os.walk(log_files_dir_abs):
+        for file in files:
+            if file.endswith('.log'):
+                file_path = os.path.join(root, file)
+                try:
+                    process_log_file(file_path, output_dir_abs, type)
+                    print(f"Processed file: {file}")
+                except Exception as e:
+                    print(f"An error occurred while processing {file}: {e}")
+
+    print("Success")
+    
