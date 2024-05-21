@@ -1,0 +1,116 @@
+================== txpwr 1 =============
+ 
+ Coaxial test with TXPWR = 1
+Tx power : 1			Calibration_use : OFF
+OK
+waiting 35 seconds for antenna to adjust
+Running iperf3 test for 25 seconds...
+
+*** iperf3 Test ***
+\n Running CLI test...
+\n Current Configuration
+---------------------------------------------------
+[MAC Configuration]
+Device Mode			 : STA
+MAC Address			 : 00:c0:ca:b4:65:2e
+Country				 : DE
+Bandwidth			 : 2M
+Frequency			 : 8640
+MAC80211_freq			 : 5205
+Rate Control			 : ON
+ -MCS				 : 0
+ -bw				 : 2 Mhz (NRC Auto)
+Guard Interval			 : LONG
+Security			 : OFF
+RTS				 : OFF
+RTS threshold			 : 0
+Format				 : S1G
+Preamble type			 : S1G_SHORT
+Promiscuous Mode		 : OFF
+color				 : 0x0
+Auto CFO Cal			 : OFF
+BSSID				 : 00:c0:ca:b4:65:38
+AID				 : 1
+
+[PHY Configuration]
+TX_Gain				 : 1
+RX_Gain				 : 82
+
+Tx Power			 : 1
+---------------------------------------------------
+OK
+++++++++++++++++++ DONE 1 +++++++++++++
+
+Waiting for antenna to set new power 1...
+Coaxial test with TXPWR = 1 
+
+Timestamp : Sat 11 May 2024 03:08:44 AM -05
+Running CLI test...
+
+*** CLI Test ***
+spawn ./cli_app
+===================================================
+     Newracom Command Line Application (2.10)      
+===================================================
+NRC> show signal start 1 20 
+OK
+NRC> Mac Addr : 00:c0:ca:b4:65:2e	rssi: -102  	snr: 0
+
+Mac Addr : 00:c0:ca:b4:65:2e	rssi: -102  	snr: 0
+
+Mac Addr : 00:c0:ca:b4:65:2e	rssi: -102  	snr: 0
+
+Mac Addr : 00:c0:ca:b4:65:2e	rssi: -102  	snr: 0
+
+Mac Addr : 00:c0:ca:b4:65:2e	rssi: -102  	snr: 0
+
+Mac Addr : 00:c0:ca:b4:65:2e	rssi: -102  	snr: 0
+
+Mac Addr : 00:c0:ca:b4:65:2e	rssi: -102  	snr: 0
+
+Mac Addr : 00:c0:ca:b4:65:2e	rssi: -102  	snr: 0
+
+Mac Addr : 00:c0:ca:b4:65:2e	rssi: -102  	snr: 0
+
+Mac Addr : 00:c0:ca:b4:65:2e	rssi: -102  	snr: 0
+
+Mac Addr : 00:c0:ca:b4:65:2e	rssi: -102  	snr: 0
+
+Mac Addr : 00:c0:ca:b4:65:2e	rssi: -102  	snr: 0
+
+Mac Addr : 00:c0:ca:b4:65:2e	rssi: -102  	snr: 0
+
+Mac Addr : 00:c0:ca:b4:65:2e	rssi: -102  	snr: 0
+
+Mac Addr : 00:c0:ca:b4:65:2e	rssi: -102  	snr: 0
+
+Mac Addr : 00:c0:ca:b4:65:2e	rssi: -102  	snr: 0
+
+Mac Addr : 00:c0:ca:b4:65:2e	rssi: -102  	snr: 0
+
+Mac Addr : 00:c0:ca:b4:65:2e	rssi: -102  	snr: 0
+
+Mac Addr : 00:c0:ca:b4:65:2e	rssi: -102  	snr: 0
+
+Mac Addr : 00:c0:ca:b4:65:2e	rssi: -102  	snr: 0
+
+--------------------------------------------------
+[MAC Addr]: 00:c0:ca:b4:65:2e
+[Total]   : 20
+[RSSI]
+ average  : -102.000
+ std_dev  : 0.000
+[SNR]
+ average  : 0.000
+ std_dev  : 0.000
+--------------------------------------------------
+NRC>
+exit
+===================================================
+      Exit Newracom Command Line Application       
+===================================================
+
+ CLI Test Done.
+Starting Network Signal Strength Test Collection...
+Timestamp: Sat 11 May 2024 03:09:05 AM -05
+Coaxial set up with 70 dBm attenuation

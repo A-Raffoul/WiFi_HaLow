@@ -1,0 +1,150 @@
+================== txpwr 12 =============
+ 
+ Coaxial test with TXPWR = 12
+Tx power : 12			Calibration_use : OFF
+OK
+waiting 35 seconds for antenna to adjust
+Running iperf3 test for 25 seconds...
+
+*** iperf3 Test ***
+Connecting to host 192.168.200.1, port 5201
+[  5] local 192.168.200.23 port 55365 connected to 192.168.200.1 port 5201
+[ ID] Interval           Transfer     Bitrate         Total Datagrams
+[  5]   0.00-1.00   sec   481 KBytes  3.94 Mbits/sec  340  
+[  5]   1.00-2.00   sec   424 KBytes  3.48 Mbits/sec  300  
+[  5]   2.00-3.00   sec   410 KBytes  3.36 Mbits/sec  290  
+[  5]   3.00-4.00   sec   410 KBytes  3.36 Mbits/sec  290  
+[  5]   4.00-5.00   sec   410 KBytes  3.36 Mbits/sec  290  
+[  5]   5.00-6.00   sec   410 KBytes  3.36 Mbits/sec  290  
+[  5]   6.00-7.00   sec   410 KBytes  3.36 Mbits/sec  290  
+[  5]   7.00-8.00   sec   410 KBytes  3.36 Mbits/sec  290  
+[  5]   8.00-9.00   sec   410 KBytes  3.36 Mbits/sec  290  
+[  5]   9.00-10.00  sec   424 KBytes  3.48 Mbits/sec  300  
+[  5]  10.00-11.00  sec   410 KBytes  3.36 Mbits/sec  290  
+[  5]  11.00-12.00  sec   410 KBytes  3.36 Mbits/sec  290  
+[  5]  12.00-13.00  sec   410 KBytes  3.36 Mbits/sec  290  
+[  5]  13.00-14.00  sec   424 KBytes  3.48 Mbits/sec  300  
+[  5]  14.00-15.00  sec   410 KBytes  3.36 Mbits/sec  290  
+[  5]  15.00-16.00  sec   410 KBytes  3.36 Mbits/sec  290  
+[  5]  16.00-17.00  sec   410 KBytes  3.36 Mbits/sec  290  
+[  5]  17.00-18.00  sec   410 KBytes  3.36 Mbits/sec  290  
+[  5]  18.00-19.00  sec   410 KBytes  3.36 Mbits/sec  290  
+[  5]  19.00-20.00  sec   410 KBytes  3.36 Mbits/sec  290  
+[  5]  20.00-21.00  sec   410 KBytes  3.36 Mbits/sec  290  
+[  5]  21.00-22.00  sec   424 KBytes  3.48 Mbits/sec  300  
+[  5]  22.00-23.00  sec   396 KBytes  3.24 Mbits/sec  280  
+[  5]  23.00-24.00  sec   424 KBytes  3.48 Mbits/sec  300  
+[  5]  24.00-25.00  sec   410 KBytes  3.36 Mbits/sec  290  
+- - - - - - - - - - - - - - - - - - - - - - - - -
+[ ID] Interval           Transfer     Bitrate         Jitter    Lost/Total Datagrams
+[  5]   0.00-25.00  sec  10.1 MBytes  3.40 Mbits/sec  0.000 ms  0/7340 (0%)  sender
+[  5]   0.00-25.19  sec  10.1 MBytes  3.38 Mbits/sec  5.325 ms  0/7340 (0%)  receiver
+
+iperf Done.
+\n Running CLI test...
+\n Current Configuration
+---------------------------------------------------
+[MAC Configuration]
+Device Mode			 : STA
+MAC Address			 : 00:c0:ca:b4:65:2e
+Country				 : DE
+Bandwidth			 : 2M
+Frequency			 : 8640
+MAC80211_freq			 : 5205
+Rate Control			 : ON
+ -MCS				 : 7
+ -bw				 : 2 Mhz (NRC Auto)
+Guard Interval			 : LONG
+Security			 : OFF
+RTS				 : OFF
+RTS threshold			 : 0
+Format				 : S1G
+Preamble type			 : S1G_SHORT
+Promiscuous Mode		 : OFF
+color				 : 0x0
+Auto CFO Cal			 : OFF
+BSSID				 : 00:c0:ca:b4:65:38
+AID				 : 1
+
+[PHY Configuration]
+TX_Gain				 : 12
+RX_Gain				 : 82
+
+Tx Power			 : 12
+---------------------------------------------------
+OK
+++++++++++++++++++ DONE 12 +++++++++++++
+
+Waiting for antenna to set new power 12...
+Coaxial test with TXPWR = 12 
+
+Timestamp : Sat 11 May 2024 02:07:33 AM -05
+Running CLI test...
+
+*** CLI Test ***
+spawn ./cli_app
+===================================================
+     Newracom Command Line Application (2.10)      
+===================================================
+NRC> show signal start 1 20 
+OK
+NRC> Mac Addr : 00:c0:ca:b4:65:2e	rssi: -78  	snr: 23
+
+Mac Addr : 00:c0:ca:b4:65:2e	rssi: -79  	snr: 23
+
+Mac Addr : 00:c0:ca:b4:65:2e	rssi: -79  	snr: 23
+
+Mac Addr : 00:c0:ca:b4:65:2e	rssi: -79  	snr: 24
+
+Mac Addr : 00:c0:ca:b4:65:2e	rssi: -79  	snr: 23
+
+Mac Addr : 00:c0:ca:b4:65:2e	rssi: -79  	snr: 23
+
+Mac Addr : 00:c0:ca:b4:65:2e	rssi: -79  	snr: 24
+
+Mac Addr : 00:c0:ca:b4:65:2e	rssi: -79  	snr: 23
+
+Mac Addr : 00:c0:ca:b4:65:2e	rssi: -79  	snr: 24
+
+Mac Addr : 00:c0:ca:b4:65:2e	rssi: -79  	snr: 23
+
+Mac Addr : 00:c0:ca:b4:65:2e	rssi: -79  	snr: 23
+
+Mac Addr : 00:c0:ca:b4:65:2e	rssi: -79  	snr: 23
+
+Mac Addr : 00:c0:ca:b4:65:2e	rssi: -79  	snr: 23
+
+Mac Addr : 00:c0:ca:b4:65:2e	rssi: -79  	snr: 24
+
+Mac Addr : 00:c0:ca:b4:65:2e	rssi: -79  	snr: 24
+
+Mac Addr : 00:c0:ca:b4:65:2e	rssi: -79  	snr: 23
+
+Mac Addr : 00:c0:ca:b4:65:2e	rssi: -79  	snr: 23
+
+Mac Addr : 00:c0:ca:b4:65:2e	rssi: -79  	snr: 23
+
+Mac Addr : 00:c0:ca:b4:65:2e	rssi: -79  	snr: 23
+
+Mac Addr : 00:c0:ca:b4:65:2e	rssi: -79  	snr: 23
+
+--------------------------------------------------
+[MAC Addr]: 00:c0:ca:b4:65:2e
+[Total]   : 20
+[RSSI]
+ average  : -78.950
+ std_dev  : 0.218
+[SNR]
+ average  : 23.250
+ std_dev  : 0.433
+--------------------------------------------------
+NRC>
+exit
+===================================================
+      Exit Newracom Command Line Application       
+===================================================
+
+ CLI Test Done.
+Starting Network Signal Strength Test Collection...
+Timestamp: Sat 11 May 2024 02:07:54 AM -05
+Coaxial set up with 50 dBm attenuation

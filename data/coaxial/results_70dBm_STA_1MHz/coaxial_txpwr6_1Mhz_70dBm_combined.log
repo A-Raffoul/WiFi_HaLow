@@ -1,0 +1,53 @@
+================== txpwr 6 =============
+ 
+ Coaxial test with TXPWR = 6
+Tx power : 6			Calibration_use : OFF
+OK
+waiting 35 seconds for antenna to adjust
+
+Waiting for antenna to set new power 6...
+Coaxial test with TXPWR = 6 
+
+Timestamp : Sat 11 May 2024 01:13:37 AM -05
+Running CLI test...
+
+*** CLI Test ***
+spawn ./cli_app
+===================================================
+     Newracom Command Line Application (2.10)      
+===================================================
+NRC> show signal start 1 20 
+OK
+NRC> Mac Addr : 00:c0:ca:b4:65:2e	rssi: -102  	snr: 2
+
+Mac Addr : 00:c0:ca:b4:65:2e	rssi: -102  	snr: 2
+
+Mac Addr : 00:c0:ca:b4:65:2e	rssi: -102  	snr: 2
+
+Mac Addr : 00:c0:ca:b4:65:2e	rssi: -102  	snr: 2
+
+Mac Addr : 00:c0:ca:b4:65:2e	rssi: -102  	snr: 2
+
+Mac Addr : 00:c0:ca:b4:65:2e	rssi: -103  	snr: 0
+
+Mac Addr : 00:c0:ca:b4:65:2e	rssi: -103  	snr: 0
+
+Mac Addr : 00:c0:ca:b4:65:2e	rssi: -103  	snr: 0
+
+Mac Addr : 00:c0:ca:b4:65:2e	rssi: -103  	snr: 0
+
+Mac Addr : 00:c0:ca:b4:65:2e	rssi: -103  	snr: 0
+
+Mac Addr : 00:c0:ca:b4:65:2e	rssi: -103  	snr: 0
+
+Mac Addr : 00:c0:ca:b4:65:2e	rssi: -103  	snr: 0
+
+Mac Addr : 00:c0:ca:b4:65:2e	rssi: -103  	snr: 0
+
+Mac Addr : 00:c0:ca:b4:65:2e	rssi: -103  	snr: 0
+
+
+ CLI Test Done.
+Starting Network Signal Strength Test Collection...
+Timestamp: Sat 11 May 2024 01:13:51 AM -05
+Coaxial set up with 70 dBm attenuation

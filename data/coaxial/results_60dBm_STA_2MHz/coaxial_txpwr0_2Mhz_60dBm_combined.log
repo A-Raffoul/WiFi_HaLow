@@ -1,0 +1,149 @@
+================== txpwr 0 =============
+ 
+ Coaxial test with TXPWR = 0
+Tx power : 0			Calibration_use : OFF
+OK
+waiting 35 seconds for antenna to adjust
+Running iperf3 test for 25 seconds...
+
+*** iperf3 Test ***
+Connecting to host 192.168.200.1, port 5201
+[  5] local 192.168.200.23 port 45337 connected to 192.168.200.1 port 5201
+[ ID] Interval           Transfer     Bitrate         Total Datagrams
+[  5]   0.00-1.00   sec   156 KBytes  1.27 Mbits/sec  110  
+[  5]   1.00-2.00   sec  56.6 KBytes   463 Kbits/sec  40  
+[  5]   2.00-3.00   sec  70.7 KBytes   579 Kbits/sec  50  
+[  5]   3.00-4.00   sec  42.4 KBytes   348 Kbits/sec  30  
+[  5]   4.00-5.00   sec  70.7 KBytes   579 Kbits/sec  50  
+[  5]   5.00-6.00   sec  56.6 KBytes   463 Kbits/sec  40  
+[  5]   6.00-7.00   sec  56.6 KBytes   463 Kbits/sec  40  
+[  5]   7.00-8.00   sec  70.7 KBytes   579 Kbits/sec  50  
+[  5]   8.00-9.00   sec  70.7 KBytes   579 Kbits/sec  50  
+[  5]   9.00-10.00  sec  56.6 KBytes   463 Kbits/sec  40  
+[  5]  10.00-11.00  sec  56.6 KBytes   463 Kbits/sec  40  
+[  5]  11.00-12.00  sec  70.7 KBytes   579 Kbits/sec  50  
+[  5]  12.00-13.00  sec  84.8 KBytes   695 Kbits/sec  60  
+[  5]  13.00-14.00  sec  42.4 KBytes   347 Kbits/sec  30  
+[  5]  14.00-15.00  sec  70.7 KBytes   579 Kbits/sec  50  
+[  5]  15.00-16.00  sec  56.6 KBytes   463 Kbits/sec  40  
+[  5]  16.00-17.00  sec  70.7 KBytes   579 Kbits/sec  50  
+[  5]  17.00-18.00  sec  56.6 KBytes   463 Kbits/sec  40  
+[  5]  18.00-19.00  sec  56.6 KBytes   463 Kbits/sec  40  
+[  5]  19.00-20.00  sec  70.7 KBytes   579 Kbits/sec  50  
+[  5]  20.00-21.00  sec  42.4 KBytes   347 Kbits/sec  30  
+[  5]  21.00-22.00  sec  56.6 KBytes   463 Kbits/sec  40  
+[  5]  22.00-23.00  sec  56.6 KBytes   463 Kbits/sec  40  
+[  5]  23.00-24.00  sec  56.6 KBytes   463 Kbits/sec  40  
+[  5]  24.00-25.00  sec  70.7 KBytes   579 Kbits/sec  50  
+- - - - - - - - - - - - - - - - - - - - - - - - -
+[ ID] Interval           Transfer     Bitrate         Jitter    Lost/Total Datagrams
+[  5]   0.00-25.00  sec  1.59 MBytes   533 Kbits/sec  0.000 ms  0/1150 (0%)  sender
+[  5]   0.00-26.52  sec  1.59 MBytes   502 Kbits/sec  35.454 ms  0/1150 (0%)  receiver
+
+iperf Done.
+\n Running CLI test...
+\n Current Configuration
+---------------------------------------------------
+[MAC Configuration]
+Device Mode			 : STA
+MAC Address			 : 00:c0:ca:b4:65:2e
+Country				 : DE
+Bandwidth			 : 2M
+Frequency			 : 8640
+MAC80211_freq			 : 5205
+Rate Control			 : ON
+ -MCS				 : 0
+ -bw				 : 2 Mhz (NRC Auto)
+Guard Interval			 : LONG
+Security			 : OFF
+RTS				 : OFF
+RTS threshold			 : 0
+Format				 : S1G
+Preamble type			 : S1G_SHORT
+Promiscuous Mode		 : OFF
+color				 : 0x0
+Auto CFO Cal			 : OFF
+BSSID				 : 00:c0:ca:b4:65:38
+AID				 : 1
+
+[PHY Configuration]
+TX_Gain				 : 0
+RX_Gain				 : 82
+
+Tx Power			 : 0
+---------------------------------------------------
+OK
+++++++++++++++++++ DONE 0 +++++++++++++
+
+Network test collection completed.
+
+Waiting for antenna to set new power 0...
+Coaxial test with TXPWR = 0 
+
+Timestamp : Sat 11 May 2024 02:46:44 AM -05
+Running CLI test...
+
+*** CLI Test ***
+spawn ./cli_app
+===================================================
+     Newracom Command Line Application (2.10)      
+===================================================
+NRC> show signal start 1 20 
+OK
+NRC> Mac Addr : 00:c0:ca:b4:65:2e	rssi: -99  	snr: 3
+
+Mac Addr : 00:c0:ca:b4:65:2e	rssi: -99  	snr: 3
+
+Mac Addr : 00:c0:ca:b4:65:2e	rssi: -99  	snr: 3
+
+Mac Addr : 00:c0:ca:b4:65:2e	rssi: -99  	snr: 3
+
+Mac Addr : 00:c0:ca:b4:65:2e	rssi: -99  	snr: 3
+
+Mac Addr : 00:c0:ca:b4:65:2e	rssi: -99  	snr: 3
+
+Mac Addr : 00:c0:ca:b4:65:2e	rssi: -99  	snr: 4
+
+Mac Addr : 00:c0:ca:b4:65:2e	rssi: -99  	snr: 4
+
+Mac Addr : 00:c0:ca:b4:65:2e	rssi: -99  	snr: 4
+
+Mac Addr : 00:c0:ca:b4:65:2e	rssi: -99  	snr: 4
+
+Mac Addr : 00:c0:ca:b4:65:2e	rssi: -99  	snr: 3
+
+Mac Addr : 00:c0:ca:b4:65:2e	rssi: -99  	snr: 4
+
+Mac Addr : 00:c0:ca:b4:65:2e	rssi: -99  	snr: 4
+
+Mac Addr : 00:c0:ca:b4:65:2e	rssi: -99  	snr: 3
+
+Mac Addr : 00:c0:ca:b4:65:2e	rssi: -99  	snr: 3
+
+Mac Addr : 00:c0:ca:b4:65:2e	rssi: -99  	snr: 3
+
+Mac Addr : 00:c0:ca:b4:65:2e	rssi: -99  	snr: 3
+
+Mac Addr : 00:c0:ca:b4:65:2e	rssi: -98  	snr: 4
+
+Mac Addr : 00:c0:ca:b4:65:2e	rssi: -99  	snr: 3
+
+Mac Addr : 00:c0:ca:b4:65:2e	rssi: -99  	snr: 3
+
+--------------------------------------------------
+[MAC Addr]: 00:c0:ca:b4:65:2e
+[Total]   : 20
+[RSSI]
+ average  : -98.950
+ std_dev  : 0.218
+[SNR]
+ average  : 3.350
+ std_dev  : 0.477
+--------------------------------------------------
+NRC>
+exit
+===================================================
+      Exit Newracom Command Line Application       
+===================================================
+
+ CLI Test Done.
