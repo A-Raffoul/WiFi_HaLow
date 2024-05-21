@@ -12,11 +12,11 @@ guard_interval: long
 tx_gain: 13
 iperf_test_length: 60
 rx_iperf_bitrate: 1.22
-tx_iperf_bitrate: 1.22
+tx_iperf_bitrate: 1.25
 receiver_lost_total_datagrams: 0/2690
 jitter: 13.495
 receiver_ber: 0
 rssi_sequence: [-89, -88, -88, -88, -88, -88, -88, -88, -88, -88, -88, -88, -88, -88, -88, -88, -88, -88, -88, -88]
 snr_sequence: [18, 19, 19, 19, 19, 19, 19, 19, 19, 19, 19, 19, 19, 19, 19, 19, 19, 19, 19, 19]
-rsii : -88.0
-snr : 19.0
+rssi_median: -88.0
+snr_median: 19.0

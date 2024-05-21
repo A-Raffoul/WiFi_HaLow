@@ -45,7 +45,7 @@ def extract_iperf_data(log_content):
     iperf3_match = iperf3_pattern.search(log_content)
 
     if not iperf3_match:
-        return {}, []
+        return {}, [], []
 
     iperf3_results = iperf3_match.group(1)
 
@@ -55,36 +55,45 @@ def extract_iperf_data(log_content):
     summary_match = summary_pattern.findall(iperf3_results)
 
     iperf3_summary = {}
+    sender_bitrate = None
+    receiver_bitrate = None
     for match in summary_match:
-        receiver_bit_rate = float(match[0])
+        bitrate = float(match[0])
         if match[1] == "K":
-            receiver_bit_rate /= 1000  # Convert Kbits/sec to Mbits/sec
-        iperf3_summary = {
-            "Test Length (seconds)": 60,  # Assuming 60 seconds as mentioned
-            "Receiver Bit Rate": receiver_bit_rate,
-            "Jitter": match[2],
-            "Receiver Lost/Total Datagrams": f"{match[3]}/{match[4]}",
-            "Receiver BER (%)": match[5]
-        }
+            bitrate /= 1000  # Convert Kbits/sec to Mbits/sec
+        if match[6] == "sender":
+            sender_bitrate = bitrate
+        elif match[6] == "receiver":
+            receiver_bitrate = bitrate
+            iperf3_summary = {
+                "Test Length (seconds)": 60,  # Assuming 60 seconds as mentioned
+                "Receiver Bit Rate": receiver_bitrate,
+                "Sender Bit Rate": sender_bitrate,
+                "Jitter": match[2],
+                "Receiver Lost/Total Datagrams": f"{match[3]}/{match[4]}",
+                "Receiver BER (%)": match[5]
+            }
 
-    bitrate_per_second = []
+    sender_bitrate_per_second = []
+    receiver_bitrate_per_second = []
     detailed_lines = iperf3_results.splitlines()
     bitrate_pattern = re.compile(
-        r"\[\s*\d+\]\s+\d+\.\d+-\d+\.\d+\s+sec\s+([\d\.]+)\s+\w*Bytes\s+([\d\.]+)\s+(K|M|)bits/sec"
+        r"\[\s*\d+\]\s+\d+\.\d+-\d+\.\d+\s+sec\s+([\d\.]+)\s+\w*Bytes\s+([\d\.]+)\s+(K|M|)bits/sec\s+(\w+)"
     )
     
     for line in detailed_lines:
-        if "sender" in line or "receiver" in line:
-            continue  # Skip summary lines
         match = bitrate_pattern.search(line)
         if match:
             groups = match.groups()
             bitrate = float(groups[1])
             if groups[2] == "K":
                 bitrate /= 1000  # Convert Kbits/sec to Mbits/sec
-            bitrate_per_second.append(bitrate)
+            if groups[3] == "sender":
+                sender_bitrate_per_second.append(bitrate)
+            elif groups[3] == "receiver":
+                receiver_bitrate_per_second.append(bitrate)
 
-    return iperf3_summary, bitrate_per_second
+    return iperf3_summary, sender_bitrate_per_second, receiver_bitrate_per_second
 
 def extract_signal_info(log_content):
     signal_info_pattern = re.compile(r"Mac Addr\s+: \S+\s+rssi: (-?\d+)\s+snr: (\d+)")
@@ -109,8 +118,11 @@ def extract_timestamp_and_attenuation(log_content):
 
 def create_text_data(test_name, mac_phy_data, iperf_data, signal_data, timestamp, attenuation):
     mcs, bandwidth, frequency, rate_control, guard_interval, tx_gain = mac_phy_data
-    iperf3_summary, _ = iperf_data
+    iperf3_summary, sender_bitrate_per_second, receiver_bitrate_per_second = iperf_data
     rssi_values, snr_values = signal_data
+
+    rssi_median = np.median(rssi_values) if rssi_values else None
+    snr_median = np.median(snr_values) if snr_values else None
 
     text_data = f"""test_name: {test_name}
 timestamp: {timestamp}
@@ -126,14 +138,14 @@ guard_interval: {guard_interval.lower()}
 tx_gain: {tx_gain}
 iperf_test_length: {iperf3_summary.get("Test Length (seconds)")}
 rx_iperf_bitrate: {iperf3_summary.get("Receiver Bit Rate")}
-tx_iperf_bitrate: {iperf3_summary.get("Receiver Bit Rate")}
+tx_iperf_bitrate: {iperf3_summary.get("Sender Bit Rate")}
 receiver_lost_total_datagrams: {iperf3_summary.get("Receiver Lost/Total Datagrams")}
 jitter: {iperf3_summary.get("Jitter")}
 receiver_ber: {iperf3_summary.get("Receiver BER (%)")}
 rssi_sequence: {rssi_values}
 snr_sequence: {snr_values}
-rsii : {np.median(rssi_values)}
-snr : {np.median(snr_values)}
+rssi_median: {rssi_median}
+snr_median: {snr_median}
 """
 
     return text_data
