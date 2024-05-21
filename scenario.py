@@ -1,30 +1,105 @@
+import os
+import re
+import pandas as pd
 import numpy as np
+import matplotlib.pyplot as plt
 
+class Scenario:
+    def __init__(self, file_path):
+        self.file_path = file_path
+        self.test_name = None
+        self.timestamp = None
+        self.test_type = None
+        self.distance = 'null'
+        self.attenuation = None
+        self.propagation = 'LoS'
+        self.bandwidth = None
+        self.frequency = None
+        self.mcs = None
+        self.rate_control = 'null'
+        self.guard_interval = 'null'
+        self.tx_gain = None
+        self.rx_iperf_bitrate = None
+        self.tx_iperf_bitrate = None
+        self.receiver_lost_total_datagrams = None
+        self.jitter = None
+        self.receiver_ber = None
+        self.rssi_sequence = []
+        self.snr_sequence = []
+        self.rssi_median = None
+        self.snr_median = None
+        self.total_gain = None
+        self.process_file()
 
-class Scenario:    
-    def __init__(self, test_name, test_type, distance, attenuation, propagation, bandwidth, frequency, mcs, rate_control, guard_interval, tx_gain, 
-                iperf_test_length, rx_iperf_bitrate, tx_iperf_bitrate, receiver_lost_total_datagrams, jitter, 
-                receiver_ber, rssi_sequence,snr_sequence 
-                ):
-        self.test_name = test_name
-        self.test_type = test_type              # 'coaxial', 'indoor' or 'outdoor'
-        self.distance = distance                # distance in meters, null for coaxial
-        self.attenuation = attenuation          # attenuation in dB for coaxial, null for indoor and outdoor
-        self.propagation = propagation          # 'LoS' or 'NLoS'
-        self.bandwidth = bandwidth              # '1' or '2' MHz
-        self.frequency = frequency              # Channel used
-        self.mcs = mcs 
-        self.rate_control = rate_control        # 'on' or 'off'
-        self.guard_interval = guard_interval    # 'short' or 'long'
-        self.tx_gain = tx_gain                  # 'high' or 'low'
-        self.iperf_test_length = iperf_test_length # in seconds
-        self.receiver_lost_total_datagrams = receiver_lost_total_datagrams 
-        self.jitter = jitter                    # in ms
-        self.receiver_ber = receiver_ber        # in %
-        self.rssi_sequence = rssi_sequence      # list of RSSI values 
-        self.snr_sequence = snr_sequence         # list of SNR values 
-        self.rx_iperf_bitrate = rx_iperf_bitrate      # in Mbits/sec
-        self.tx_iperf_bitrate = tx_iperf_bitrate      # in Mbits/sec
+    def process_file(self):
+        with open(self.file_path, 'r') as file:
+            for line in file:
+                key_value = line.strip().split(': ', 1)
+                if len(key_value) == 2:
+                    key, value = key_value
+                    if key == 'test_name':
+                        self.test_name = value
+                    elif key == 'timestamp':
+                        self.timestamp = value
+                    elif key == 'test_type':
+                        self.test_type = value
+                    elif key == 'attenuation':
+                        self.attenuation = int(value)
+                    elif key == 'bandwidth':
+                        self.bandwidth = value
+                    elif key == 'frequency':
+                        self.frequency = value
+                    elif key == 'mcs':
+                        self.mcs = int(value)
+                    elif key == 'rate_control':
+                        self.rate_control = value
+                    elif key == 'guard_interval':
+                        self.guard_interval = value
+                    elif key == 'tx_gain':
+                        self.tx_gain = int(value)
+                    elif key == 'rx_iperf_bitrate':
+                        self.rx_iperf_bitrate = float(value)
+                    elif key == 'tx_iperf_bitrate':
+                        self.tx_iperf_bitrate = float(value)
+                    elif key == 'receiver_lost_total_datagrams':
+                        self.receiver_lost_total_datagrams = value
+                    elif key == 'jitter':
+                        self.jitter = float(value)
+                    elif key == 'receiver_ber':
+                        self.receiver_ber = float(value)
+                    elif key == 'rssi_sequence':
+                        self.rssi_sequence = [int(x) for x in re.findall(r'-?\d+', value)]
+                    elif key == 'snr_sequence':
+                        self.snr_sequence = [int(x) for x in re.findall(r'\d+', value)]
+                    elif key == 'rssi_median':
+                        self.rssi_median = float(value)
+                    elif key == 'snr_median':
+                        self.snr_median = float(value)
 
-        self.snr = np.average(snr_sequence)     # should use median value?
-        self.rssi = np.average(rssi_sequence)   # should use median value?
+        if self.test_type == 'coaxial':
+            self.total_gain = self.tx_gain - self.attenuation
+        
+
+    def to_dict(self):
+        return {
+            'Test Name': self.test_name,
+            'Timestamp': self.timestamp,
+            'Test Type': self.test_type,
+            'Distance': self.distance,
+            'Attenuation (dBm)': self.attenuation,
+            'Propagation': self.propagation,
+            'Bandwidth': self.bandwidth,
+            'Frequency': self.frequency,
+            'MCS': self.mcs,
+            'Rate Control': self.rate_control,
+            'Guard Interval': self.guard_interval,
+            'TX Gain': self.tx_gain,
+            'RX iPerf Bitrate (Mbits/sec)': self.rx_iperf_bitrate,
+            'TX iPerf Bitrate (Mbits/sec)': self.tx_iperf_bitrate,
+            'Receiver Lost/Total Datagrams': self.receiver_lost_total_datagrams,
+            'Jitter (ms)': self.jitter,
+            'Receiver BER (%)': self.receiver_ber,
+            'RSSI Median': self.rssi_median,
+            'SNR Median': self.snr_median,
+            'Total Gain' : self.total_gain
+        }

@@ -1,6 +1,5 @@
 import re
 import os
-from datetime import datetime
 import numpy as np
 
 def read_log_file(log_file_path):
@@ -196,6 +195,6 @@ def process_directory(log_files_dir, output_dir):
     print("Processing complete.")
 
 # Example usage
-source_directory = r'C:\Users\raffoul\Desktop\WiFi_HaLow\data\coaxial\raw-logs'
-target_directory = r'C:\Users\raffoul\Desktop\WiFi_HaLow\data\coaxial\logs'
+source_directory = r'data\coaxial\raw-logs'
+target_directory = r'data\coaxial\logs'
 process_directory(source_directory, target_directory)
