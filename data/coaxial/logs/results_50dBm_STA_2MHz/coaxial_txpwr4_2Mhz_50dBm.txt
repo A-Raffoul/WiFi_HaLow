@@ -1,0 +1,22 @@
+test_name: coaxial_txpwr4_2Mhz_50dBm_combined
+timestamp: Sat 11 May 2024 02:15:38 AM -05
+test_type: coaxial
+distance: null
+attenuation: 50
+propagation: LoS
+bandwidth: 2M
+frequency: 8640
+mcs: 4
+rate_control: on
+guard_interval: long
+tx_gain: 4
+iperf_test_length: 60
+rx_iperf_bitrate: 2.31
+tx_iperf_bitrate: 2.31
+receiver_lost_total_datagrams: 0/5050
+jitter: 7.868
+receiver_ber: 0
+rssi_sequence: [-87, -88, -88, -88, -87, -88, -87, -88, -88, -88, -88, -88, -88, -88, -88, -88, -88, -88, -88, -88]
+snr_sequence: [17, 16, 16, 16, 16, 16, 17, 16, 17, 17, 17, 17, 17, 17, 16, 17, 16, 16, 16, 16]
+rsii : -88.0
+snr : 16.0

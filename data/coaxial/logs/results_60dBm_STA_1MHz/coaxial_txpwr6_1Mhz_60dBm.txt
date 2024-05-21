@@ -1,0 +1,22 @@
+test_name: coaxial_txpwr6_1Mhz_60dBm_combined
+timestamp: Sat 11 May 2024 06:53:44 AM CEST
+test_type: coaxial
+distance: null
+attenuation: 60
+propagation: LoS
+bandwidth: 1M
+frequency: 8675
+mcs: 3
+rate_control: on
+guard_interval: long
+tx_gain: 6
+iperf_test_length: 60
+rx_iperf_bitrate: 0.847
+tx_iperf_bitrate: 0.847
+receiver_lost_total_datagrams: 0/1890
+jitter: 21.578
+receiver_ber: 0
+rssi_sequence: [-96, -95, -95, -95, -95, -95, -96, -95, -95, -95, -95, -95, -95, -95, -95, -95, -96, -95, -95, -95]
+snr_sequence: [10, 11, 11, 11, 11, 11, 12, 12, 11, 11, 12, 12, 11, 11, 11, 11, 11, 11, 12, 12]
+rsii : -95.0
+snr : 11.0

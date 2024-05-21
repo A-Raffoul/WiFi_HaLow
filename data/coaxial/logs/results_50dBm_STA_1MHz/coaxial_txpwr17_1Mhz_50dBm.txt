@@ -1,0 +1,22 @@
+test_name: coaxial_txpwr17_1Mhz_50dBm_combined
+timestamp: Sat 11 May 2024 01:18:31 AM -05
+test_type: coaxial
+distance: null
+attenuation: 50
+propagation: LoS
+bandwidth: 1M
+frequency: 8675
+mcs: 7
+rate_control: on
+guard_interval: long
+tx_gain: 17
+iperf_test_length: 60
+rx_iperf_bitrate: 1.83
+tx_iperf_bitrate: 1.83
+receiver_lost_total_datagrams: 0/4000
+jitter: 9.598
+receiver_ber: 0
+rssi_sequence: [-70, -72, -73, -73, -72, -73, -73, -72, -72, -73, -74, -73, -72, -72, -72, -72, -73, -73, -73, -72]
+snr_sequence: [25, 27, 27, 28, 28, 28, 28, 27, 27, 27, 28, 28, 28, 28, 27, 27, 28, 28, 27, 27]
+rsii : -72.5
+snr : 27.5
