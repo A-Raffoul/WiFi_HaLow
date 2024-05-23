@@ -12,7 +12,7 @@ class Scenario:
         self.test_type = None
         self.distance = None
         self.walls = None
-        self.attenuation = None
+        self.attenuation = 'null'
         self.propagation = 'LoS'
         self.bandwidth = None
         self.frequency = None
@@ -50,7 +50,7 @@ class Scenario:
                     elif key == 'walls':
                         self.walls = value
                     elif key == 'attenuation':
-                        self.attenuation = int(value)
+                        self.attenuation = value
                     elif key == 'bandwidth':
                         self.bandwidth = value
                     elif key == 'frequency':

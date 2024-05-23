@@ -1,7 +1,7 @@
 test_name: point_E_fixed_10_1Mhz_indoor_1615
 timestamp: Wed 08 May 2024 04:15:46 PM -01
 test_type: indoor
-distance: 0
+distance: 40
 walls: 4
 attenuation: None
 propagation: NLoS

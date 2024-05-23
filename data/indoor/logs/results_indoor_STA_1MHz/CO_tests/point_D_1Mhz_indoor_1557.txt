@@ -1,7 +1,7 @@
 test_name: point_D_1Mhz_indoor_1557
 timestamp: Wed 08 May 2024 03:57:48 PM -01
 test_type: indoor
-distance: 0
+distance: 30
 walls: 3
 attenuation: None
 propagation: NLoS
