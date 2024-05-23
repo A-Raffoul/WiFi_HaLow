@@ -10,7 +10,7 @@ class Scenario:
         self.test_name = None
         self.timestamp = None
         self.test_type = None
-        self.distance = None
+        self.distance = 'null'
         self.walls = None
         self.attenuation = 'null'
         self.propagation = 'LoS'
