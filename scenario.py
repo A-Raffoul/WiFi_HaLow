@@ -12,7 +12,7 @@ class Scenario:
         self.test_type = None
         self.distance = None
         self.walls = None
-        self.attenuation = 'null'
+        self.attenuation = 0
         self.propagation = 'LoS'
         self.bandwidth = None
         self.frequency = None
@@ -23,7 +23,7 @@ class Scenario:
         self.rx_iperf_bitrate = None
         self.tx_iperf_bitrate = None
         self.bit_rate_per_second = None
-        self.receiver_lost_total_datagrams = None
+        self.receiver_lost_total_datagrams = 'null'
         self.jitter = None
         self.receiver_ber = None
         self.rssi_sequence = []
@@ -50,7 +50,10 @@ class Scenario:
                     elif key == 'walls':
                         self.walls = value
                     elif key == 'attenuation':
-                        self.attenuation = value
+                        if self.test_type == 'coaxial':
+                            self.attenuation = int(value)
+                    elif key == 'propagation':
+                        self.propagation = value
                     elif key == 'bandwidth':
                         self.bandwidth = value
                     elif key == 'frequency':
@@ -69,8 +72,8 @@ class Scenario:
                         self.tx_iperf_bitrate = float(value)
                     elif key == 'receiver_lost_total_datagrams':
                         self.receiver_lost_total_datagrams = value
-                    elif key == 'bit_rate_per_second':
-                        self.bit_rate_per_second = [float(x) for x in re.findall(r'\d+\.\d+', value)]
+                    # elif key == 'bit_rate_per_second':
+                    #     self.bit_rate_per_second = [float(x) for x in re.findall(r'\d+\.\d+', value)]
                     elif key == 'jitter':
                         self.jitter = float(value)
                     elif key == 'receiver_ber':
