@@ -10,8 +10,9 @@ class Scenario:
         self.test_name = None
         self.timestamp = None
         self.test_type = None
-        self.distance = 'null'
-        self.attenuation = None
+        self.distance = None
+        self.walls = None
+        self.attenuation = 'null'
         self.propagation = 'LoS'
         self.bandwidth = None
         self.frequency = None
@@ -21,6 +22,7 @@ class Scenario:
         self.tx_gain = None
         self.rx_iperf_bitrate = None
         self.tx_iperf_bitrate = None
+        self.bit_rate_per_second = None
         self.receiver_lost_total_datagrams = None
         self.jitter = None
         self.receiver_ber = None
@@ -43,8 +45,12 @@ class Scenario:
                         self.timestamp = value
                     elif key == 'test_type':
                         self.test_type = value
+                    elif key == 'distance':
+                        self.distance = value
+                    elif key == 'walls':
+                        self.walls = value
                     elif key == 'attenuation':
-                        self.attenuation = int(value)
+                        self.attenuation = value
                     elif key == 'bandwidth':
                         self.bandwidth = value
                     elif key == 'frequency':
@@ -63,6 +69,8 @@ class Scenario:
                         self.tx_iperf_bitrate = float(value)
                     elif key == 'receiver_lost_total_datagrams':
                         self.receiver_lost_total_datagrams = value
+                    elif key == 'bit_rate_per_second':
+                        self.bit_rate_per_second = [float(x) for x in re.findall(r'\d+\.\d+', value)]
                     elif key == 'jitter':
                         self.jitter = float(value)
                     elif key == 'receiver_ber':

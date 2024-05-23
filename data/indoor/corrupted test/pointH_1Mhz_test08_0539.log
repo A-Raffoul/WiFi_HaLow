@@ -1,0 +1,57 @@
+Starting Network Test Collection...
+Timestamp: Wed 08 May 2024 05:39:56 AM CEST
+iperf3 Server IP: 192.168.200.1
+iperf3 Test Duration: 60 seconds
+Ping Packet Count: 60
+\n Running ping test with 60 packets...
+
+*** Ping Test ***
+PING 192.168.200.1 (192.168.200.1) 100(128) bytes of data.
+108 bytes from 192.168.200.1: icmp_seq=24 ttl=64 time=65.1 ms
+
+--- 192.168.200.1 ping statistics ---
+60 packets transmitted, 1 received, 98.3333% packet loss, time 61343ms
+rtt min/avg/max/mdev = 65.076/65.076/65.076/0.000 ms
+Running iperf3 test for 60 seconds...
+
+*** iperf3 Test ***
+\n Running CLI test...
+---------------------------------------------------
+[MAC Configuration]
+Device Mode			 : STA
+MAC Address			 : 00:c0:ca:b4:65:2e
+Country				 : DE
+Bandwidth			 : 1M
+Frequency			 : 8645
+MAC80211_freq			 : 5185
+Rate Control			 : ON
+ -MCS				 : 7
+ -bw				 : 1 Mhz (NRC Auto)
+Guard Interval			 : LONG
+Security			 : OFF
+RTS				 : OFF
+RTS threshold			 : 0
+Format				 : S1G
+Preamble type			 : 1M
+Promiscuous Mode		 : OFF
+color				 : 0x0
+Auto CFO Cal			 : OFF
+BSSID				 : 00:00:00:00:00:00
+AID				 : 1
+
+[PHY Configuration]
+TX_Gain				 : 14
+RX_Gain				 : 82
+
+Tx Power			 : 14
+---------------------------------------------------
+OK
+spawn ./cli_app
+===================================================
+     Newracom Command Line Application (2.10)      
+===================================================
+NRC> show signal start 1 15
+OK
+NRC> 
+
+Network test collection completed.

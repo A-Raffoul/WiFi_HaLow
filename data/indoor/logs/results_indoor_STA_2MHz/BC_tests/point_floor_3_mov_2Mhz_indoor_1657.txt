@@ -1,0 +1,24 @@
+test_name: point_floor_3_mov_2Mhz_indoor_1657
+timestamp: Wed 08 May 2024 04:57:11 PM -01
+test_type: indoor
+distance: 12
+walls: 3
+attenuation: None
+propagation: NLoS
+bandwidth: 2M
+frequency: 8640
+mcs: 2
+rate_control: on
+guard_interval: long
+tx_gain: 14
+iperf_test_length: 60
+rx_iperf_bitrate: 0.632
+tx_iperf_bitrate: 0.649
+bit_rate_per_second: [1.16, 0.695, 0.811, 0.811, 0.811, 0.811, 0.811, 0.695, 0.695, 0.347, 0.579, 0.927, 0.463, 0.926, 0.348, 0.811, 0.695, 0.695, 0.579, 0.927, 0.347, 0.348, 0.232, 0.695, 1.27, 0.347, 0.695, 0.232, 0.463, 0.579, 0.463, 0.116, 0.695, 0.695, 0.811, 0.811, 0.927, 0.579, 0.232, 0.811]
+receiver_lost_total_datagrams: 11/2240
+jitter: 18.210
+receiver_ber: 0.49
+rssi_sequence: [-99, -96, -94, -95, -97, -95, -93, -97, -99, -100, -99, -96]
+snr_sequence: [6, 8, 10, 10, 8, 11, 15, 7, 5, 5, 6, 8]
+rssi_median: -96.5
+snr_median: 8.0

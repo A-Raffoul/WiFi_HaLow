@@ -2,7 +2,7 @@ test_name: coaxial_txpwr0_2Mhz_60dBm_combined
 timestamp: Sat 11 May 2024 02:46:44 AM -05
 test_type: coaxial
 distance: null
-attenuation: 60
+attenuation: None
 propagation: LoS
 bandwidth: 2M
 frequency: 8640
@@ -13,6 +13,7 @@ tx_gain: 0
 iperf_test_length: 60
 rx_iperf_bitrate: 0.502
 tx_iperf_bitrate: 0.533
+bit_rate_per_second: [1.27, 0.463, 0.579, 0.348, 0.579, 0.463, 0.463, 0.579, 0.579, 0.463, 0.463, 0.579, 0.695, 0.347, 0.579, 0.463, 0.579, 0.463, 0.463, 0.579, 0.347, 0.463, 0.463, 0.463, 0.579]
 receiver_lost_total_datagrams: 0/1150
 jitter: 35.454
 receiver_ber: 0

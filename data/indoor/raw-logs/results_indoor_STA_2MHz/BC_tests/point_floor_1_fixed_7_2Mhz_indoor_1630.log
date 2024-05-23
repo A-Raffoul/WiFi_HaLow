@@ -1,0 +1,101 @@
+Starting Network Test Collection...
+Timestamp: Wed 08 May 2024 04:30:06 PM -01
+iperf3 Server IP: 192.168.200.1
+iperf3 Test Duration: 40 seconds
+Ping Packet Count: 
+Running iperf3 test for 40 seconds...
+
+*** iperf3 Test ***
+\n Running CLI test...
+---------------------------------------------------
+[MAC Configuration]
+Device Mode			 : STA
+MAC Address			 : 00:c0:ca:b4:65:2e
+Country				 : DE
+Bandwidth			 : 2M
+Frequency			 : 8640
+MAC80211_freq			 : 5205
+Rate Control			 : OFF
+ -MCS				 : 7
+Guard Interval			 : LONG
+Security			 : OFF
+RTS				 : OFF
+RTS threshold			 : 0
+Format				 : S1G
+Preamble type			 : S1G_SHORT
+Promiscuous Mode		 : OFF
+color				 : 0x0
+Auto CFO Cal			 : OFF
+BSSID				 : 00:c0:ca:b4:65:38
+AID				 : 1
+
+[PHY Configuration]
+TX_Gain				 : 14
+RX_Gain				 : 82
+
+Tx Power			 : 14
+---------------------------------------------------
+OK
+spawn ./cli_app
+===================================================
+     Newracom Command Line Application (2.10)      
+===================================================
+NRC> show signal start 1 20
+OK
+NRC> Mac Addr : 00:c0:ca:b4:65:38	rssi: -99  	snr: 7
+
+Mac Addr : 00:c0:ca:b4:65:38	rssi: -96  	snr: 9
+
+Mac Addr : 00:c0:ca:b4:65:38	rssi: -94  	snr: 10
+
+Mac Addr : 00:c0:ca:b4:65:38	rssi: -94  	snr: 10
+
+Mac Addr : 00:c0:ca:b4:65:38	rssi: -94  	snr: 11
+
+Mac Addr : 00:c0:ca:b4:65:38	rssi: -94  	snr: 12
+
+Mac Addr : 00:c0:ca:b4:65:38	rssi: -94  	snr: 12
+
+Mac Addr : 00:c0:ca:b4:65:38	rssi: -94  	snr: 11
+
+Mac Addr : 00:c0:ca:b4:65:38	rssi: -95  	snr: 10
+
+Mac Addr : 00:c0:ca:b4:65:38	rssi: -94  	snr: 12
+
+Mac Addr : 00:c0:ca:b4:65:38	rssi: -94  	snr: 13
+
+Mac Addr : 00:c0:ca:b4:65:38	rssi: -94  	snr: 13
+
+Mac Addr : 00:c0:ca:b4:65:38	rssi: -94  	snr: 12
+
+Mac Addr : 00:c0:ca:b4:65:38	rssi: -94  	snr: 12
+
+Mac Addr : 00:c0:ca:b4:65:38	rssi: -94  	snr: 11
+
+Mac Addr : 00:c0:ca:b4:65:38	rssi: -95  	snr: 10
+
+Mac Addr : 00:c0:ca:b4:65:38	rssi: -96  	snr: 10
+
+Mac Addr : 00:c0:ca:b4:65:38	rssi: -94  	snr: 11
+
+Mac Addr : 00:c0:ca:b4:65:38	rssi: -93  	snr: 12
+
+Mac Addr : 00:c0:ca:b4:65:38	rssi: -96  	snr: 9
+
+--------------------------------------------------
+[MAC Addr]: 00:c0:ca:b4:65:38
+[Total]   : 20
+[RSSI]
+ average  : -94.600
+ std_dev  : 1.281
+[SNR]
+ average  : 10.850
+ std_dev  : 1.459
+--------------------------------------------------
+NRC>
+exit
+===================================================
+      Exit Newracom Command Line Application       
+===================================================
+
+Network test collection completed.
