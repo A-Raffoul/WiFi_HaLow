@@ -1,0 +1,179 @@
+Starting Network Test Collection...
+Timestamp: Wed 08 May 2024 05:25:29 AM CEST
+iperf3 Server IP: 192.168.200.1
+iperf3 Test Duration: 60 seconds
+Ping Packet Count: 60
+\n Running ping test with 60 packets...
+
+*** Ping Test ***
+PING 192.168.200.1 (192.168.200.1) 100(128) bytes of data.
+108 bytes from 192.168.200.1: icmp_seq=4 ttl=64 time=74.0 ms
+108 bytes from 192.168.200.1: icmp_seq=5 ttl=64 time=22.0 ms
+108 bytes from 192.168.200.1: icmp_seq=6 ttl=64 time=107 ms
+108 bytes from 192.168.200.1: icmp_seq=7 ttl=64 time=40.0 ms
+108 bytes from 192.168.200.1: icmp_seq=13 ttl=64 time=210 ms
+108 bytes from 192.168.200.1: icmp_seq=14 ttl=64 time=8.16 ms
+108 bytes from 192.168.200.1: icmp_seq=15 ttl=64 time=8.88 ms
+From 192.168.200.1 icmp_seq=12 Destination Host Unreachable
+108 bytes from 192.168.200.1: icmp_seq=16 ttl=64 time=7.99 ms
+108 bytes from 192.168.200.1: icmp_seq=17 ttl=64 time=18.9 ms
+108 bytes from 192.168.200.1: icmp_seq=18 ttl=64 time=7.94 ms
+108 bytes from 192.168.200.1: icmp_seq=19 ttl=64 time=7.95 ms
+108 bytes from 192.168.200.1: icmp_seq=20 ttl=64 time=11.9 ms
+108 bytes from 192.168.200.1: icmp_seq=21 ttl=64 time=20.9 ms
+108 bytes from 192.168.200.1: icmp_seq=22 ttl=64 time=7.95 ms
+108 bytes from 192.168.200.1: icmp_seq=23 ttl=64 time=21.9 ms
+108 bytes from 192.168.200.1: icmp_seq=24 ttl=64 time=7.94 ms
+108 bytes from 192.168.200.1: icmp_seq=25 ttl=64 time=7.92 ms
+108 bytes from 192.168.200.1: icmp_seq=26 ttl=64 time=33.9 ms
+108 bytes from 192.168.200.1: icmp_seq=27 ttl=64 time=28.0 ms
+108 bytes from 192.168.200.1: icmp_seq=28 ttl=64 time=14.0 ms
+108 bytes from 192.168.200.1: icmp_seq=29 ttl=64 time=11.9 ms
+108 bytes from 192.168.200.1: icmp_seq=30 ttl=64 time=10.9 ms
+108 bytes from 192.168.200.1: icmp_seq=31 ttl=64 time=24.0 ms
+108 bytes from 192.168.200.1: icmp_seq=32 ttl=64 time=14.9 ms
+108 bytes from 192.168.200.1: icmp_seq=33 ttl=64 time=25.0 ms
+108 bytes from 192.168.200.1: icmp_seq=34 ttl=64 time=15.0 ms
+108 bytes from 192.168.200.1: icmp_seq=35 ttl=64 time=10.9 ms
+108 bytes from 192.168.200.1: icmp_seq=36 ttl=64 time=13.9 ms
+108 bytes from 192.168.200.1: icmp_seq=37 ttl=64 time=27.9 ms
+108 bytes from 192.168.200.1: icmp_seq=38 ttl=64 time=13.0 ms
+108 bytes from 192.168.200.1: icmp_seq=40 ttl=64 time=36.1 ms
+108 bytes from 192.168.200.1: icmp_seq=41 ttl=64 time=13.9 ms
+108 bytes from 192.168.200.1: icmp_seq=42 ttl=64 time=13.0 ms
+108 bytes from 192.168.200.1: icmp_seq=44 ttl=64 time=24.2 ms
+108 bytes from 192.168.200.1: icmp_seq=45 ttl=64 time=22.0 ms
+108 bytes from 192.168.200.1: icmp_seq=50 ttl=64 time=30.4 ms
+108 bytes from 192.168.200.1: icmp_seq=51 ttl=64 time=22.0 ms
+108 bytes from 192.168.200.1: icmp_seq=52 ttl=64 time=7.93 ms
+108 bytes from 192.168.200.1: icmp_seq=53 ttl=64 time=32.0 ms
+108 bytes from 192.168.200.1: icmp_seq=54 ttl=64 time=7.95 ms
+108 bytes from 192.168.200.1: icmp_seq=55 ttl=64 time=8.92 ms
+108 bytes from 192.168.200.1: icmp_seq=56 ttl=64 time=7.93 ms
+108 bytes from 192.168.200.1: icmp_seq=57 ttl=64 time=28.9 ms
+108 bytes from 192.168.200.1: icmp_seq=58 ttl=64 time=13.9 ms
+108 bytes from 192.168.200.1: icmp_seq=59 ttl=64 time=17.0 ms
+108 bytes from 192.168.200.1: icmp_seq=60 ttl=64 time=29.1 ms
+
+--- 192.168.200.1 ping statistics ---
+60 packets transmitted, 46 received, +1 errors, 23.3333% packet loss, time 59576ms
+rtt min/avg/max/mdev = 7.916/24.998/210.300/32.734 ms, pipe 4
+Running iperf3 test for 60 seconds...
+
+*** iperf3 Test ***
+Connecting to host 192.168.200.1, port 5201
+\n Running CLI test...
+---------------------------------------------------
+[MAC Configuration]
+Device Mode			 : STA
+MAC Address			 : 00:c0:ca:b4:65:2e
+Country				 : DE
+Bandwidth			 : 2M
+Frequency			 : 8640
+MAC80211_freq			 : 5205
+Rate Control			 : ON
+ -MCS				 : 0
+ -bw				 : 2 Mhz (NRC Auto)
+Guard Interval			 : LONG
+Security			 : OFF
+RTS				 : OFF
+RTS threshold			 : 0
+Format				 : S1G
+Preamble type			 : S1G_SHORT
+Promiscuous Mode		 : OFF
+color				 : 0x0
+Auto CFO Cal			 : OFF
+BSSID				 : 00:c0:ca:b4:65:38
+AID				 : 1
+
+[PHY Configuration]
+TX_Gain				 : 14
+RX_Gain				 : 82
+
+Tx Power			 : 14
+---------------------------------------------------
+OK
+spawn ./cli_app
+===================================================
+     Newracom Command Line Application (2.10)      
+===================================================
+NRC> show signal start 1 15
+OK
+NRC> Mac Addr : 00:c0:ca:b4:65:38	rssi: 0  	snr: 0
+
+Mac Addr : 00:c0:ca:b4:65:38	rssi: -29  	snr: 0
+
+Mac Addr : 00:c0:ca:b4:65:38	rssi: -29  	snr: 0
+
+Mac Addr : 00:c0:ca:b4:65:38	rssi: -29  	snr: 0
+
+Mac Addr : 00:c0:ca:b4:65:38	rssi: -29  	snr: 0
+
+Mac Addr : 00:c0:ca:b4:65:38	rssi: -29  	snr: 0
+
+Mac Addr : 00:c0:ca:b4:65:38	rssi: -58  	snr: 0
+
+Mac Addr : 00:c0:ca:b4:65:38	rssi: -102  	snr: 0
+
+Mac Addr : 00:c0:ca:b4:65:38	rssi: -102  	snr: 0
+
+Mac Addr : 00:c0:ca:b4:65:38	rssi: -103  	snr: 0
+
+Mac Addr : 00:c0:ca:b4:65:38	rssi: -104  	snr: 0
+
+Mac Addr : 00:c0:ca:b4:65:38	rssi: -103  	snr: 0
+
+Mac Addr : 00:c0:ca:b4:65:38	rssi: -102  	snr: 1
+
+Mac Addr : 00:c0:ca:b4:65:38	rssi: -101  	snr: 3
+
+Mac Addr : 00:c0:ca:b4:65:38	rssi: -100  	snr: 5
+
+--------------------------------------------------
+[MAC Addr]: 00:c0:ca:b4:65:38
+[Total]   : 15
+[RSSI]
+ average  : -68.000
+ std_dev  : 37.996
+[SNR]
+ average  : 0.600
+ std_dev  : 1.405
+--------------------------------------------------
+NRC>
+show config 
+exit
+---------------------------------------------------
+[MAC Configuration]
+Device Mode			 : STA
+MAC Address			 : 00:c0:ca:b4:65:2e
+Country				 : DE
+Bandwidth			 : 2M
+Frequency			 : 8640
+MAC80211_freq			 : 5205
+Rate Control			 : ON
+ -MCS				 : 7
+ -bw				 : 2 Mhz (NRC Auto)
+Guard Interval			 : LONG
+Security			 : OFF
+RTS				 : OFF
+RTS threshold			 : 0
+Format				 : S1G
+Preamble type			 : S1G_SHORT
+Promiscuous Mode		 : OFF
+color				 : 0x0
+Auto CFO Cal			 : OFF
+BSSID				 : 00:c0:ca:b4:65:38
+AID				 : 1
+
+[PHY Configuration]
+TX_Gain				 : 14
+RX_Gain				 : 82
+
+Tx Power			 : 14
+---------------------------------------------------
+OK
+NRC> ===================================================
+      Exit Newracom Command Line Application       
+===================================================
+
+Network test collection completed.
