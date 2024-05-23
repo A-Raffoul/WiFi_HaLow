@@ -1,0 +1,24 @@
+test_name: point_E_1Mhz_indoor_1600
+timestamp: Wed 08 May 2024 04:00:45 PM -01
+test_type: indoor
+distance: 0
+walls: 0
+attenuation: None
+propagation: NLoS
+bandwidth: 1M
+frequency: 8655
+mcs: 1
+rate_control: on
+guard_interval: long
+tx_gain: 14
+iperf_test_length: 60
+rx_iperf_bitrate: 0.108
+tx_iperf_bitrate: 0.151
+bit_rate_per_second: [0.694, 0.0, 0.116, 0.0, 0.116, 0.116, 0.232, 0.579, 0.463, 0.463, 0.347, 0.116, 0.0, 0.116, 0.116, 0.0, 0.116, 0.0, 0.0, 0.116, 0.232, 0.232, 0.116, 0.116, 0.116, 0.0, 0.0, 0.116, 0.0, 0.116, 0.0, 0.116, 0.0, 0.116, 0.463, 0.116, 0.0, 0.116, 0.0, 0.348]
+receiver_lost_total_datagrams: 132/520
+jitter: 71.150
+receiver_ber: 25
+rssi_sequence: [-98, -98, -102, -102, -102, -103, -103, -103, -103, -102, -102, -102, -101, -102, -102, -102, -102, -103, -103, -103]
+snr_sequence: [8, 8, 1, 0, 0, 0, 0, 0, 0, 2, 2, 2, 2, 1, 1, 2, 1, 0, 0, 0]
+rssi_median: -102.0
+snr_median: 1.0

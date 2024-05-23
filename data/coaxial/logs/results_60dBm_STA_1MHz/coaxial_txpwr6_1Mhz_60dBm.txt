@@ -13,6 +13,7 @@ tx_gain: 6
 iperf_test_length: 60
 rx_iperf_bitrate: 0.847
 tx_iperf_bitrate: 0.876
+bit_rate_per_second: [1.51, 0.811, 0.811, 0.927, 0.927, 0.811, 0.811, 0.811, 0.927, 0.811, 0.811, 0.927, 0.811, 0.811, 0.927, 0.811, 0.811, 0.811, 0.811, 0.927, 0.811, 0.927, 0.811, 0.927, 0.811]
 receiver_lost_total_datagrams: 0/1890
 jitter: 21.578
 receiver_ber: 0

@@ -11,8 +11,9 @@ rate_control: on
 guard_interval: long
 tx_gain: 8
 iperf_test_length: 60
-rx_iperf_bitrate: 0.000445
+rx_iperf_bitrate: 445.0
 tx_iperf_bitrate: 0.0649
+bit_rate_per_second: [0.694, 0.0, 0.116, 0.0, 0.0, 0.116, 0.0, 0.116, 0.0, 0.0, 0.116, 0.0, 0.116, 0.0, 0.0, 0.116, 0.0, 0.0, 0.0, 0.0, 0.116, 0.0, 0.0, 0.116, 0.0]
 receiver_lost_total_datagrams: 64/66
 jitter: 607.782
 receiver_ber: 97

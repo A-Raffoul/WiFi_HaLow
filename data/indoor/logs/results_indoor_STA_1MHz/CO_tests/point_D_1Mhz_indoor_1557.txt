@@ -1,0 +1,24 @@
+test_name: point_D_1Mhz_indoor_1557
+timestamp: Wed 08 May 2024 03:57:48 PM -01
+test_type: indoor
+distance: 0
+walls: 0
+attenuation: None
+propagation: NLoS
+bandwidth: 1M
+frequency: 8655
+mcs: 1
+rate_control: on
+guard_interval: long
+tx_gain: 14
+iperf_test_length: 60
+rx_iperf_bitrate: 0.273
+tx_iperf_bitrate: 0.298
+bit_rate_per_second: [1.04, 0.347, 0.116, 0.347, 0.464, 0.463, 0.348, 0.0, 0.0, 0.116, 0.116, 0.232, 0.463, 0.116, 0.464, 0.116, 0.232, 0.232, 0.116, 0.348, 0.0, 0.232, 0.348, 0.232, 0.347, 0.464, 0.232, 0.347, 0.348, 0.579, 0.232, 0.464, 0.348, 0.116, 0.116, 0.232, 0.348, 0.463, 0.463, 0.347]
+receiver_lost_total_datagrams: 28/1030
+jitter: 69.328
+receiver_ber: 2.7
+rssi_sequence: [-100, -99, -98, -99, -100, -98, -99, -100, -99, -98, -96, -100, -98, -96, -100, -100, -100, -100, -99, -98]
+snr_sequence: [5, 5, 6, 6, 4, 7, 6, 5, 4, 8, 8, 4, 7, 10, 4, 4, 4, 4, 6, 8]
+rssi_median: -99.0
+snr_median: 5.5

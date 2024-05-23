@@ -73,26 +73,24 @@ def extract_iperf_data(log_content):
                 "Receiver BER (%)": match[5]
             }
 
-    sender_bitrate_per_second = []
-    receiver_bitrate_per_second = []
+    bitrate_per_second = []
     detailed_lines = iperf3_results.splitlines()
     bitrate_pattern = re.compile(
-        r"\[\s*\d+\]\s+\d+\.\d+-\d+\.\d+\s+sec\s+([\d\.]+)\s+\w*Bytes\s+([\d\.]+)\s+(K|M|)bits/sec\s+(\w+)"
+        r"\[\s*\d+\]\s+\d+\.\d+-\d+\.\d+\s+sec\s+([\d\.]+)\s+\w*Bytes\s+([\d\.]+)\s+(K|M|)bits/sec"
     )
     
     for line in detailed_lines:
+        if "sender" in line or "receiver" in line:
+            continue  # Skip summary lines
         match = bitrate_pattern.search(line)
         if match:
             groups = match.groups()
             bitrate = float(groups[1])
             if groups[2] == "K":
                 bitrate /= 1000  # Convert Kbits/sec to Mbits/sec
-            if groups[3] == "sender":
-                sender_bitrate_per_second.append(bitrate)
-            elif groups[3] == "receiver":
-                receiver_bitrate_per_second.append(bitrate)
+            bitrate_per_second.append(bitrate)
 
-    return iperf3_summary, sender_bitrate_per_second, receiver_bitrate_per_second
+    return iperf3_summary, bitrate_per_second
 
 def extract_signal_info(log_content):
     signal_info_pattern = re.compile(r"Mac Addr\s+: \S+\s+rssi: (-?\d+)\s+snr: (\d+)")
@@ -117,7 +115,7 @@ def extract_timestamp_and_attenuation(log_content):
 
 def create_text_data(test_name, mac_phy_data, iperf_data, signal_data, timestamp, attenuation):
     mcs, bandwidth, frequency, rate_control, guard_interval, tx_gain = mac_phy_data
-    iperf3_summary, sender_bitrate_per_second, receiver_bitrate_per_second = iperf_data
+    iperf3_summary, bitrate_per_second = iperf_data
     rssi_values, snr_values = signal_data
 
     rssi_median = np.median(rssi_values) if rssi_values else None
@@ -125,10 +123,11 @@ def create_text_data(test_name, mac_phy_data, iperf_data, signal_data, timestamp
 
     text_data = f"""test_name: {test_name}
 timestamp: {timestamp}
-test_type: coaxial
-distance: null
+test_type: indoor
+distance: 0
+walls: 0
 attenuation: {attenuation}
-propagation: LoS
+propagation: NLoS
 bandwidth: {bandwidth}
 frequency: {frequency}
 mcs: {mcs}
@@ -138,6 +137,7 @@ tx_gain: {tx_gain}
 iperf_test_length: {iperf3_summary.get("Test Length (seconds)")}
 rx_iperf_bitrate: {iperf3_summary.get("Receiver Bit Rate")}
 tx_iperf_bitrate: {iperf3_summary.get("Sender Bit Rate")}
+bit_rate_per_second: {bitrate_per_second}
 receiver_lost_total_datagrams: {iperf3_summary.get("Receiver Lost/Total Datagrams")}
 jitter: {iperf3_summary.get("Jitter")}
 receiver_ber: {iperf3_summary.get("Receiver BER (%)")}
@@ -195,6 +195,6 @@ def process_directory(log_files_dir, output_dir):
     print("Processing complete.")
 
 # Example usage
-source_directory = r'data\coaxial\raw-logs'
-target_directory = r'data\coaxial\logs'
+source_directory = r'data\indoor\raw-logs\results_indoor_STA_1MHz'
+target_directory = r'data\indoor\logs\results_indoor_STA_1MHz'
 process_directory(source_directory, target_directory)

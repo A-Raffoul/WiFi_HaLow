@@ -1,0 +1,24 @@
+test_name: point_floor_0_2Mhz_indoor_1621
+timestamp: Wed 08 May 2024 04:21:37 PM -01
+test_type: indoor
+distance: 0
+walls: 0
+attenuation: None
+propagation: NLoS
+bandwidth: 2M
+frequency: 8640
+mcs: 7
+rate_control: on
+guard_interval: long
+tx_gain: 14
+iperf_test_length: 60
+rx_iperf_bitrate: 2.87
+tx_iperf_bitrate: 3.39
+bit_rate_per_second: [4.05, 3.48, 3.48, 3.48, 3.48, 3.36, 3.48, 3.36, 3.36, 3.36, 3.36, 3.47, 3.36, 3.48, 3.48, 3.48, 3.48, 3.36, 3.48, 3.48, 3.48, 3.36, 3.48, 3.47, 3.36, 3.36, 3.48, 3.48, 3.36, 3.36, 3.48, 3.36, 3.48, 3.48, 3.48, 3.48, 3.36, 3.48, 2.32, 2.2]
+receiver_lost_total_datagrams: 1698/11700
+jitter: 9.472
+receiver_ber: 15
+rssi_sequence: [-71, -63, -62, -65, -65, -63, -62, -65, -63, -63, -63, -64, -69, -73, -78, -79, -70, -69, -70, -67]
+snr_sequence: [26, 29, 28, 28, 28, 28, 28, 29, 28, 28, 29, 29, 28, 27, 25, 25, 28, 28, 28, 29]
+rssi_median: -65.0
+snr_median: 28.0

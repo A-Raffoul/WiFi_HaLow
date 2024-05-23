@@ -1,0 +1,24 @@
+test_name: point_E_fixed_10_1Mhz_indoor_1615
+timestamp: Wed 08 May 2024 04:15:46 PM -01
+test_type: indoor
+distance: 0
+walls: 0
+attenuation: None
+propagation: NLoS
+bandwidth: 1M
+frequency: 8655
+mcs: 10
+rate_control: off
+guard_interval: long
+tx_gain: 14
+iperf_test_length: 60
+rx_iperf_bitrate: 0.483
+tx_iperf_bitrate: 0.539
+bit_rate_per_second: [1.27, 0.463, 0.579, 0.463, 0.579, 0.463, 0.579, 0.463, 0.463, 0.579, 0.579, 0.463, 0.463, 0.579, 0.579, 0.463, 0.463, 0.579, 0.579, 0.463, 0.463, 0.579, 0.463, 0.579, 0.579, 0.463, 0.463, 0.579, 0.579, 0.463, 0.463, 0.579, 0.463, 0.463, 0.579, 0.579, 0.463, 0.463, 0.579, 0.579]
+receiver_lost_total_datagrams: 132/1860
+jitter: 35.355
+receiver_ber: 7.1
+rssi_sequence: [0, -75, -99, -102, -103, -103, -103, -102, -103, -103, -102, -102, -103, -103, -103, -103, -103, -103, -103, -103]
+snr_sequence: [0, 6, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+rssi_median: -103.0
+snr_median: 0.0
