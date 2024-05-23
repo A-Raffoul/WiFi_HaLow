@@ -2,7 +2,7 @@ test_name: point_C_mov_2Mhz_indoor_1647
 timestamp: Wed 08 May 2024 04:47:12 PM -01
 test_type: indoor
 distance: 0
-walls: 0
+walls: 2
 attenuation: None
 propagation: NLoS
 bandwidth: 2M
