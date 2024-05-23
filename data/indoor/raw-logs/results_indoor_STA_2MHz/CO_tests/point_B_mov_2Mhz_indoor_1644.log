@@ -1,0 +1,135 @@
+Starting Network Test Collection...
+Timestamp: Wed 08 May 2024 04:44:11 PM -01
+iperf3 Server IP: 192.168.200.1
+iperf3 Test Duration: 40 seconds
+Ping Packet Count: 
+Running iperf3 test for 40 seconds...
+
+*** iperf3 Test ***
+Connecting to host 192.168.200.1, port 5201
+[  5] local 192.168.200.23 port 54222 connected to 192.168.200.1 port 5201
+[ ID] Interval           Transfer     Bitrate         Total Datagrams
+[  5]   0.00-1.00   sec   269 KBytes  2.20 Mbits/sec  190  
+[  5]   1.00-2.00   sec   198 KBytes  1.62 Mbits/sec  140  
+[  5]   2.00-3.00   sec   212 KBytes  1.74 Mbits/sec  150  
+[  5]   3.00-4.00   sec   226 KBytes  1.85 Mbits/sec  160  
+[  5]   4.00-5.00   sec   226 KBytes  1.85 Mbits/sec  160  
+[  5]   5.00-6.00   sec   212 KBytes  1.74 Mbits/sec  150  
+[  5]   6.00-7.00   sec   297 KBytes  2.43 Mbits/sec  210  
+[  5]   7.00-8.00   sec   297 KBytes  2.43 Mbits/sec  210  
+[  5]   8.00-9.00   sec   368 KBytes  3.01 Mbits/sec  260  
+[  5]   9.00-10.00  sec   368 KBytes  3.01 Mbits/sec  260  
+[  5]  10.00-11.00  sec   283 KBytes  2.32 Mbits/sec  200  
+[  5]  11.00-12.00  sec   325 KBytes  2.66 Mbits/sec  230  
+[  5]  12.00-13.00  sec   269 KBytes  2.20 Mbits/sec  190  
+[  5]  13.00-14.00  sec   255 KBytes  2.09 Mbits/sec  180  
+[  5]  14.00-15.00  sec   368 KBytes  3.01 Mbits/sec  260  
+[  5]  15.00-16.00  sec   269 KBytes  2.20 Mbits/sec  190  
+[  5]  16.00-17.00  sec   325 KBytes  2.66 Mbits/sec  230  
+[  5]  17.00-18.00  sec   184 KBytes  1.51 Mbits/sec  130  
+[  5]  18.00-19.00  sec   240 KBytes  1.97 Mbits/sec  170  
+[  5]  19.00-20.00  sec   283 KBytes  2.32 Mbits/sec  200  
+[  5]  20.00-21.00  sec   283 KBytes  2.32 Mbits/sec  200  
+[  5]  21.00-22.00  sec   156 KBytes  1.27 Mbits/sec  110  
+[  5]  22.00-23.00  sec   198 KBytes  1.62 Mbits/sec  140  
+[  5]  23.00-24.00  sec   283 KBytes  2.32 Mbits/sec  200  
+[  5]  24.00-25.00  sec   297 KBytes  2.43 Mbits/sec  210  
+[  5]  25.00-26.00  sec   198 KBytes  1.62 Mbits/sec  140  
+[  5]  26.00-27.00  sec   311 KBytes  2.55 Mbits/sec  220  
+[  5]  27.00-28.00  sec   269 KBytes  2.20 Mbits/sec  190  
+[  5]  28.00-29.00  sec   269 KBytes  2.20 Mbits/sec  190  
+[  5]  29.00-30.00  sec   297 KBytes  2.43 Mbits/sec  210  
+[  5]  30.00-31.00  sec   283 KBytes  2.32 Mbits/sec  200  
+[  5]  31.00-32.00  sec   283 KBytes  2.32 Mbits/sec  200  
+[  5]  32.00-33.00  sec   283 KBytes  2.32 Mbits/sec  200  
+[  5]  33.00-34.00  sec   297 KBytes  2.43 Mbits/sec  210  
+[  5]  34.00-35.00  sec   283 KBytes  2.32 Mbits/sec  200  
+[  5]  35.00-36.00  sec   339 KBytes  2.78 Mbits/sec  240  
+[  5]  36.00-37.00  sec   396 KBytes  3.24 Mbits/sec  280  
+[  5]  37.00-38.00  sec   311 KBytes  2.55 Mbits/sec  220  
+[  5]  38.00-39.00  sec   311 KBytes  2.55 Mbits/sec  220  
+[  5]  39.00-40.00  sec   226 KBytes  1.85 Mbits/sec  160  
+- - - - - - - - - - - - - - - - - - - - - - - - -
+[ ID] Interval           Transfer     Bitrate         Jitter    Lost/Total Datagrams
+[  5]   0.00-40.00  sec  10.8 MBytes  2.26 Mbits/sec  0.000 ms  0/7810 (0%)  sender
+[  5]   0.00-40.25  sec  10.8 MBytes  2.25 Mbits/sec  6.708 ms  0/7810 (0%)  receiver
+
+iperf Done.
+\n Running CLI test...
+---------------------------------------------------
+[MAC Configuration]
+Device Mode			 : STA
+MAC Address			 : 00:c0:ca:b4:65:2e
+Country				 : DE
+Bandwidth			 : 2M
+Frequency			 : 8640
+MAC80211_freq			 : 5205
+Rate Control			 : ON
+ -MCS				 : 6
+ -bw				 : 2 Mhz (NRC Auto)
+Guard Interval			 : LONG
+Security			 : OFF
+RTS				 : OFF
+RTS threshold			 : 0
+Format				 : S1G
+Preamble type			 : S1G_SHORT
+Promiscuous Mode		 : OFF
+color				 : 0x0
+Auto CFO Cal			 : OFF
+BSSID				 : 00:c0:ca:b4:65:38
+AID				 : 1
+
+[PHY Configuration]
+TX_Gain				 : 14
+RX_Gain				 : 82
+
+Tx Power			 : 14
+---------------------------------------------------
+OK
+spawn ./cli_app
+===================================================
+     Newracom Command Line Application (2.10)      
+===================================================
+NRC> show signal start 1 12
+OK
+NRC> Mac Addr : 00:c0:ca:b4:65:38	rssi: -94  	snr: 13
+
+Mac Addr : 00:c0:ca:b4:65:38	rssi: -85  	snr: 21
+
+Mac Addr : 00:c0:ca:b4:65:38	rssi: -84  	snr: 22
+
+Mac Addr : 00:c0:ca:b4:65:38	rssi: -80  	snr: 25
+
+Mac Addr : 00:c0:ca:b4:65:38	rssi: -82  	snr: 24
+
+Mac Addr : 00:c0:ca:b4:65:38	rssi: -84  	snr: 22
+
+Mac Addr : 00:c0:ca:b4:65:38	rssi: -82  	snr: 24
+
+Mac Addr : 00:c0:ca:b4:65:38	rssi: -81  	snr: 24
+
+Mac Addr : 00:c0:ca:b4:65:38	rssi: -80  	snr: 24
+
+Mac Addr : 00:c0:ca:b4:65:38	rssi: -82  	snr: 24
+
+Mac Addr : 00:c0:ca:b4:65:38	rssi: -88  	snr: 19
+
+Mac Addr : 00:c0:ca:b4:65:38	rssi: -90  	snr: 17
+
+--------------------------------------------------
+[MAC Addr]: 00:c0:ca:b4:65:38
+[Total]   : 12
+[RSSI]
+ average  : -84.333
+ std_dev  : 4.130
+[SNR]
+ average  : 21.583
+ std_dev  : 3.451
+--------------------------------------------------
+NRC>
+exit
+===================================================
+      Exit Newracom Command Line Application       
+===================================================
+
+Network test collection completed.

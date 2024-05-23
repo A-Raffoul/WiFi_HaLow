@@ -1,0 +1,129 @@
+Starting Network Test Collection...
+Timestamp: Wed 08 May 2024 05:44:03 AM CEST
+iperf3 Server IP: 192.168.200.1
+iperf3 Test Duration: 60 seconds
+Ping Packet Count: 60
+\n Running ping test with 60 packets...
+
+*** Ping Test ***
+PING 192.168.200.1 (192.168.200.1) 100(128) bytes of data.
+From 192.168.200.23 icmp_seq=1 Destination Host Unreachable
+From 192.168.200.23 icmp_seq=2 Destination Host Unreachable
+From 192.168.200.23 icmp_seq=3 Destination Host Unreachable
+From 169.254.65.175 icmp_seq=55 Destination Host Unreachable
+From 169.254.65.175 icmp_seq=56 Destination Host Unreachable
+From 169.254.65.175 icmp_seq=57 Destination Host Unreachable
+From 169.254.65.175 icmp_seq=58 Destination Host Unreachable
+From 169.254.65.175 icmp_seq=59 Destination Host Unreachable
+From 169.254.65.175 icmp_seq=60 Destination Host Unreachable
+
+--- 192.168.200.1 ping statistics ---
+60 packets transmitted, 0 received, +9 errors, 100% packet loss, time 61363ms
+pipe 3
+Running iperf3 test for 60 seconds...
+
+*** iperf3 Test ***
+\n Running CLI test...
+---------------------------------------------------
+[MAC Configuration]
+Device Mode			 : STA
+MAC Address			 : 00:c0:ca:b4:65:2e
+Country				 : DE
+Bandwidth			 : 2M
+Frequency			 : 8640
+MAC80211_freq			 : 5205
+Rate Control			 : ON
+ -MCS				 : 7
+ -bw				 : 2 Mhz (NRC Auto)
+Guard Interval			 : LONG
+Security			 : OFF
+RTS				 : OFF
+RTS threshold			 : 0
+Format				 : S1G
+Preamble type			 : S1G_SHORT
+Promiscuous Mode		 : OFF
+color				 : 0x0
+Auto CFO Cal			 : OFF
+BSSID				 : 00:00:00:00:00:00
+AID				 : 1
+
+[PHY Configuration]
+TX_Gain				 : 14
+RX_Gain				 : 82
+
+Tx Power			 : 14
+---------------------------------------------------
+OK
+spawn ./cli_app
+===================================================
+     Newracom Command Line Application (2.10)      
+===================================================
+NRC> show signal start 1 15
+OK
+NRC> 
+
+
+
+
+
+
+
+
+
+
+Mac Addr : 00:c0:ca:b4:65:38	rssi: 0  	snr: 0
+
+Mac Addr : 00:c0:ca:b4:65:38	rssi: -74  	snr: 0
+
+Mac Addr : 00:c0:ca:b4:65:38	rssi: -103  	snr: 0
+
+Mac Addr : 00:c0:ca:b4:65:38	rssi: -103  	snr: 0
+
+--------------------------------------------------
+[MAC Addr]: 00:c0:ca:b4:65:38
+[Total]   : 4
+[RSSI]
+ average  : -70.000
+ std_dev  : 42.113
+[SNR]
+ average  : 0.000
+ std_dev  : 0.000
+--------------------------------------------------
+NRC>
+show config 
+exit
+---------------------------------------------------
+[MAC Configuration]
+Device Mode			 : STA
+MAC Address			 : 00:c0:ca:b4:65:2e
+Country				 : DE
+Bandwidth			 : 2M
+Frequency			 : 8640
+MAC80211_freq			 : 5205
+Rate Control			 : ON
+ -MCS				 : 2
+ -bw				 : 2 Mhz (NRC Auto)
+Guard Interval			 : LONG
+Security			 : OFF
+RTS				 : OFF
+RTS threshold			 : 0
+Format				 : S1G
+Preamble type			 : S1G_SHORT
+Promiscuous Mode		 : OFF
+color				 : 0x0
+Auto CFO Cal			 : OFF
+BSSID				 : 00:c0:ca:b4:65:38
+AID				 : 1
+
+[PHY Configuration]
+TX_Gain				 : 14
+RX_Gain				 : 82
+
+Tx Power			 : 14
+---------------------------------------------------
+OK
+NRC> ===================================================
+      Exit Newracom Command Line Application       
+===================================================
+
+Network test collection completed.
