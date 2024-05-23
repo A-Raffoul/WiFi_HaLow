@@ -2,7 +2,7 @@ test_name: coaxial_txpwr0_1Mhz_50dBm_combined
 timestamp: Sat 11 May 2024 01:35:41 AM -05
 test_type: coaxial
 distance: null
-attenuation: None
+attenuation: 50
 propagation: LoS
 bandwidth: 1M
 frequency: 8675
