@@ -1,0 +1,55 @@
+Starting Network Test Collection...
+Timestamp: Wed 08 May 2024 05:26:42 PM -01
+iperf3 Server IP: 192.168.200.1
+iperf3 Test Duration: 30 seconds
+Ping Packet Count: 
+Running iperf3 test for 30 seconds...
+
+*** iperf3 Test ***
+\n Running CLI test...
+---------------------------------------------------
+[MAC Configuration]
+Device Mode			 : STA
+MAC Address			 : 00:c0:ca:b4:65:2e
+Country				 : DE
+Bandwidth			 : 1M
+Frequency			 : 8635
+MAC80211_freq			 : 5180
+Rate Control			 : ON
+ -MCS				 : 10
+ -bw				 : 1 Mhz (NRC Auto)
+Guard Interval			 : LONG
+Security			 : OFF
+RTS				 : OFF
+RTS threshold			 : 0
+Format				 : S1G
+Preamble type			 : 1M
+Promiscuous Mode		 : OFF
+color				 : 0x0
+Auto CFO Cal			 : OFF
+BSSID				 : 00:c0:ca:b4:65:38
+AID				 : 1
+
+[PHY Configuration]
+TX_Gain				 : 14
+RX_Gain				 : 82
+
+Tx Power			 : 14
+---------------------------------------------------
+OK
+spawn ./cli_app
+===================================================
+     Newracom Command Line Application (2.10)      
+===================================================
+NRC> show signal start 1 12
+OK
+NRC> Mac Addr : 00:c0:ca:b4:65:38	rssi: -101  	snr: 0
+
+Mac Addr : 00:c0:ca:b4:65:38	rssi: -101  	snr: 1
+
+Mac Addr : 00:c0:ca:b4:65:38	rssi: -101  	snr: 1
+
+Mac Addr : 00:c0:ca:b4:65:38	rssi: -101  	snr: 1
+
+
+Network test collection completed.
