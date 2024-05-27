@@ -113,7 +113,19 @@ def extract_timestamp_and_attenuation(log_content):
 
     return timestamp, attenuation
 
-def create_text_data(test_name, mac_phy_data, iperf_data, signal_data, timestamp, attenuation):
+def extract_wall_info(title):
+    #  Search for 'floor_x' pattern in the title
+    # print(f"Searching for wall data in: {title}")
+    match = re.search(r'floor_(\d+)', title)
+    if match:
+        # If pattern is found, return the integer value of x
+        # print(f"Wall data found: {match.group(1)}")
+        return int(match.group(1))
+    else:
+        # If pattern is not found, return None
+        return None
+
+def create_text_data(test_name, mac_phy_data, iperf_data, signal_data, timestamp, attenuation, wall_data):
     mcs, bandwidth, frequency, rate_control, guard_interval, tx_gain = mac_phy_data
     iperf3_summary, bitrate_per_second = iperf_data
     rssi_values, snr_values = signal_data
@@ -125,7 +137,7 @@ def create_text_data(test_name, mac_phy_data, iperf_data, signal_data, timestamp
 timestamp: {timestamp}
 test_type: indoor
 distance: 0
-walls: 0
+walls: {wall_data}
 attenuation: {attenuation}
 propagation: NLoS
 bandwidth: {bandwidth}
@@ -168,9 +180,11 @@ def process_log_file(log_file_path, output_dir='data'):
     iperf_data = extract_iperf_data(log_content)
     signal_data = extract_signal_info(log_content)
     timestamp, attenuation = extract_timestamp_and_attenuation(log_content)
+    wall_data = extract_wall_info(base_name)
     
-    text_data = create_text_data(base_name, mac_phy_data, iperf_data, signal_data, timestamp, attenuation)
+    text_data = create_text_data(base_name, mac_phy_data, iperf_data, signal_data, timestamp, attenuation, wall_data)
     save_to_text(text_data, base_name, output_dir)
+
 
 def process_directory(log_files_dir, output_dir):
     log_files_dir_abs = os.path.abspath(log_files_dir)

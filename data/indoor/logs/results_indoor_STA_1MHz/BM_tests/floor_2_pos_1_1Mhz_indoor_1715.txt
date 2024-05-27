@@ -1,0 +1,24 @@
+test_name: floor_2_pos_1_1Mhz_indoor_1715
+timestamp: Wed 08 May 2024 05:15:45 PM -01
+test_type: indoor
+distance: 0
+walls: 2
+attenuation: None
+propagation: NLoS
+bandwidth: 1M
+frequency: 8635
+mcs: 1
+rate_control: on
+guard_interval: long
+tx_gain: 14
+iperf_test_length: 60
+rx_iperf_bitrate: 0.425
+tx_iperf_bitrate: 0.456
+bit_rate_per_second: [1.16, 0.463, 0.463, 0.463, 0.463, 0.579, 0.579, 0.579, 0.695, 0.695, 0.463, 0.463, 0.579, 0.579, 0.579, 0.463, 0.463, 0.232, 0.232, 0.348, 0.232, 0.232, 0.348, 0.348, 0.232, 0.347, 0.463, 0.232, 0.463, 0.232]
+receiver_lost_total_datagrams: 1/1180
+jitter: 54.665
+receiver_ber: 0.085
+rssi_sequence: [0, -72, -101, -101, -102, -102, -102, -102, -102, -103, -102, -102]
+snr_sequence: [0, 2, 4, 3, 1, 1, 1, 0, 0, 0, 0, 0]
+rssi_median: -102.0
+snr_median: 0.5

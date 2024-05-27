@@ -1,8 +1,8 @@
 test_name: point_E_1Mhz_indoor_1600
 timestamp: Wed 08 May 2024 04:00:45 PM -01
 test_type: indoor
-distance: 40
-walls: 4
+distance: 0
+walls: None
 attenuation: None
 propagation: NLoS
 bandwidth: 1M

@@ -1,7 +1,7 @@
 test_name: point_floor_1_2Mhz_indoor_1627
 timestamp: Wed 08 May 2024 04:27:07 PM -01
 test_type: indoor
-distance: 4
+distance: 0
 walls: 1
 attenuation: None
 propagation: NLoS
