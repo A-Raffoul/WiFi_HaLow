@@ -7,7 +7,7 @@ attenuation: None
 propagation: NLoS
 bandwidth: 1M
 frequency: 8665
-mcs: 5
+mcs: 10
 rate_control: on
 guard_interval: long
 tx_gain: 14

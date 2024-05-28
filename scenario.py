@@ -137,6 +137,16 @@ def extract_scenarios_from_text_files(directory):
                     except Exception as e:
                         print(f"An error occurred while processing {file_path}: {e}")
                         continue
+        for file in os.listdir(directory):
+                print(file)
+                if file.endswith('.txt'):
+                    file_path = os.path.join(directory, file)
+                    try:
+                        scenario = Scenario(file_path)
+                        scenarios.append(scenario)
+                    except Exception as e:
+                        print(f"An error occurred while processing {file_path}: {e}")
+                        continue
     return scenarios
 
 def scenarios_to_dataframe(scenarios):

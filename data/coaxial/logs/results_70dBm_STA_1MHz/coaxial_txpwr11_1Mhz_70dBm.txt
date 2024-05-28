@@ -6,7 +6,7 @@ attenuation: 70
 propagation: LoS
 bandwidth: 1M
 frequency: 8675
-mcs: 6
+mcs: 0
 rate_control: on
 guard_interval: long
 tx_gain: 11
