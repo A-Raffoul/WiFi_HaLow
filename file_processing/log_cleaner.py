@@ -123,7 +123,7 @@ def extract_wall_info(title):
         return int(match.group(1))
     else:
         # If pattern is not found, return None
-        return None
+        return 0
 
 def create_text_data(test_name, mac_phy_data, iperf_data, signal_data, timestamp, attenuation, wall_data):
     mcs, bandwidth, frequency, rate_control, guard_interval, tx_gain = mac_phy_data
@@ -181,6 +181,7 @@ def process_log_file(log_file_path, output_dir='data'):
     signal_data = extract_signal_info(log_content)
     timestamp, attenuation = extract_timestamp_and_attenuation(log_content)
     wall_data = extract_wall_info(base_name)
+    # print(f"Wall data: {type(wall_data)}")
     
     text_data = create_text_data(base_name, mac_phy_data, iperf_data, signal_data, timestamp, attenuation, wall_data)
     save_to_text(text_data, base_name, output_dir)
@@ -209,6 +210,6 @@ def process_directory(log_files_dir, output_dir):
     print("Processing complete.")
 
 # Example usage
-source_directory = r'data\indoor\raw-logs\results_indoor_STA_1MHz'
-target_directory = r'data\indoor\logs\results_indoor_STA_1MHz'
+source_directory = r'data\indoor\raw-logs\results_indoor_STA_2MHz'
+target_directory = r'data\indoor\logs\results_indoor_STA_2MHz'
 process_directory(source_directory, target_directory)

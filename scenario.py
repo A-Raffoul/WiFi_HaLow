@@ -3,6 +3,8 @@ import re
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
+from ipywidgets import interact, interactive, fixed, interact_manual
+
 
 class Scenario:
     def __init__(self, file_path):
@@ -11,7 +13,7 @@ class Scenario:
         self.timestamp = None
         self.test_type = None
         self.distance = None
-        self.walls = None
+        self.walls = 0
         self.attenuation = 0
         self.propagation = 'LoS'
         self.bandwidth = None
@@ -48,7 +50,7 @@ class Scenario:
                     elif key == 'distance':
                         self.distance = value
                     elif key == 'walls':
-                        self.walls = value
+                        self.walls = int(value)
                     elif key == 'attenuation':
                         if self.test_type == 'coaxial':
                             self.attenuation = int(value)
@@ -97,6 +99,7 @@ class Scenario:
             'Timestamp': self.timestamp,
             'Test Type': self.test_type,
             'Distance': self.distance,
+            'Walls': self.walls,
             'Attenuation (dBm)': self.attenuation,
             'Propagation': self.propagation,
             'Bandwidth': self.bandwidth,
@@ -114,3 +117,42 @@ class Scenario:
             'SNR Median': self.snr_median,
             'Total Gain' : self.total_gain
         }
+    
+
+
+# Function to extract scenarios from text files
+
+def extract_scenarios_from_text_files(directory):
+    scenarios = []
+    for root, dirs, files in os.walk(directory):
+        for dir in dirs:
+            source_dir = os.path.join(root, dir)
+            for file in os.listdir(source_dir):
+                print(file)
+                if file.endswith('.txt'):
+                    file_path = os.path.join(source_dir, file)
+                    try:
+                        scenario = Scenario(file_path)
+                        scenarios.append(scenario)
+                    except Exception as e:
+                        print(f"An error occurred while processing {file_path}: {e}")
+                        continue
+    return scenarios
+
+def scenarios_to_dataframe(scenarios):
+    data_dicts = [scenario.to_dict() for scenario in scenarios]
+    return pd.DataFrame(data_dicts)
+
+def get_average_and_std(df, group_by, value):
+    average = df.groupby(group_by)[value].mean().reset_index()
+    std = df.groupby(group_by)[value].std().reset_index()
+    return average, std
+
+def plot_interactive(df):
+    def update_plot(x, y):
+        fig = px.scatter(df, x=x, y=y, title=f'{x} vs {y}', labels={x: x, y: y})
+        fig.show()
+
+    columns = df.columns
+    interact(update_plot, x=columns, y=columns)
+

@@ -183,7 +183,7 @@ def process_directory(log_files_dir, output_dir, test_type='test'):
                 file_path = os.path.join(root, file)
                 try:
                     process_log_file(file_path, output_dir_abs, test_type)
-                    print(f"Processed file: {file}")
+                    # print(f"Processed file: {file}")
                 except Exception as e:
                     print(f"An error occurred while processing {file}: {e}")
 

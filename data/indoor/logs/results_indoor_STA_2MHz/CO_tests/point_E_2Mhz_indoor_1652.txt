@@ -2,7 +2,7 @@ test_name: point_E_2Mhz_indoor_1652
 timestamp: Wed 08 May 2024 04:52:12 PM -01
 test_type: indoor
 distance: 0
-walls: None
+walls: 4
 attenuation: None
 propagation: NLoS
 bandwidth: 2M
