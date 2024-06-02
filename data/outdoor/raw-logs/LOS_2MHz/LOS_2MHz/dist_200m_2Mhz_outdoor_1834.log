@@ -1,0 +1,140 @@
+Starting Network Test Collection...
+Timestamp: Tue 28 May 2024 06:34:30 PM -01
+iperf3 Server IP: 192.168.200.1
+iperf3 Test Duration: 30 seconds
+Ping Packet Count: 
+Running iperf3 test for 30 seconds...
+
+*** iperf3 Test ***
+\n Running CLI test...
+---------------------------------------------------
+[MAC Configuration]
+Device Mode			 : STA
+MAC Address			 : 00:c0:ca:b4:65:2e
+Country				 : DE
+Bandwidth			 : 2M
+Frequency			 : 8640
+MAC80211_freq			 : 5205
+Rate Control			 : ON
+ -MCS				 : 0
+ -bw				 : 2 Mhz (NRC Auto)
+Guard Interval			 : LONG
+Security			 : OFF
+RTS				 : OFF
+RTS threshold			 : 0
+Format				 : S1G
+Preamble type			 : S1G_SHORT
+Promiscuous Mode		 : OFF
+color				 : 0x0
+Auto CFO Cal			 : OFF
+BSSID				 : 00:c0:ca:b4:65:38
+AID				 : 1
+
+[PHY Configuration]
+TX_Gain				 : 14
+RX_Gain				 : 82
+
+Tx Power			 : 14
+---------------------------------------------------
+OK
+spawn ./cli_app
+===================================================
+     Newracom Command Line Application (2.10)      
+===================================================
+NRC> show signal start 1 12
+OK
+NRC> Mac Addr : 00:c0:ca:b4:65:38	rssi: -100  	snr: 6
+
+Mac Addr : 00:c0:ca:b4:65:38	rssi: -99  	snr: 5
+
+
+
+
+
+Network test collection completed.
+
+
+
+
+
+Connecting to host 192.168.200.1, port 5201
+[  5] local 192.168.200.23 port 51526 connected to 192.168.200.1 port 5201
+[ ID] Interval           Transfer     Bitrate         Total Datagrams
+[  5]   0.00-1.00   sec  84.8 KBytes   694 Kbits/sec  60  
+[  5]   1.00-2.00   sec  14.1 KBytes   116 Kbits/sec  10  
+[  5]   2.00-3.00   sec  0.00 Bytes  0.00 bits/sec  0  
+[  5]   3.00-4.00   sec  14.1 KBytes   116 Kbits/sec  10  
+[  5]   4.00-5.00   sec  14.1 KBytes   116 Kbits/sec  10  
+[  5]   5.00-6.00   sec  14.1 KBytes   116 Kbits/sec  10  
+[  5]   6.00-7.00   sec  14.1 KBytes   116 Kbits/sec  10  
+[  5]   7.00-8.00   sec  28.3 KBytes   232 Kbits/sec  20  
+[  5]   8.00-9.00   sec  28.3 KBytes   232 Kbits/sec  20  
+[  5]   9.00-10.00  sec  42.4 KBytes   348 Kbits/sec  30  
+[  5]  10.00-11.00  sec  28.3 KBytes   232 Kbits/sec  20  
+[  5]  11.00-12.00  sec  28.3 KBytes   232 Kbits/sec  20  
+[  5]  12.00-13.00  sec  42.4 KBytes   348 Kbits/sec  30  
+[  5]  13.00-14.00  sec  42.4 KBytes   348 Kbits/sec  30  
+[  5]  14.00-15.00  sec  42.4 KBytes   348 Kbits/sec  30  
+[  5]  15.00-16.00  sec  42.4 KBytes   348 Kbits/sec  30  
+[  5]  16.00-17.00  sec  42.4 KBytes   348 Kbits/sec  30  
+[  5]  17.00-18.00  sec  28.3 KBytes   232 Kbits/sec  20  
+[  5]  18.00-19.00  sec  56.6 KBytes   463 Kbits/sec  40  
+[  5]  19.00-20.00  sec  42.4 KBytes   347 Kbits/sec  30  
+- - - - - - - - - - - - - - - - - - - - - - - - -
+[ ID] Interval           Transfer     Bitrate         Jitter    Lost/Total Datagrams
+[  5]   0.00-20.00  sec   650 KBytes   266 Kbits/sec  0.000 ms  0/460 (0%)  sender
+[  5]   0.00-22.00  sec   625 KBytes   233 Kbits/sec  45.974 ms  18/460 (3.9%)  receiver
+
+iperf Done.
+
+
+
+ac Addr : 00:c0:ca:b4:65:38	rssi: -95  	snr: 9
+
+Mac Addr : 00:c0:ca:b4:65:38	rssi: -96  	snr: 9
+
+Mac Addr : 00:c0:ca:b4:65:38	rssi: -98  	snr: 7
+
+Mac Addr : 00:c0:ca:b4:65:38	rssi: -99  	snr: 6
+
+Mac Addr : 00:c0:ca:b4:65:38	rssi: -98  	snr: 7
+
+Mac Addr : 00:c0:ca:b4:65:38	rssi: -97  	snr: 8
+
+Mac Addr : 00:c0:ca:b4:65:38	rssi: -97  	snr: 8
+
+Mac Addr : 00:c0:ca:b4:65:38	rssi: -95  	snr: 9
+
+Mac Addr : 00:c0:ca:b4:65:38	rssi: -95  	snr: 10
+
+Mac Addr : 00:c0:ca:b4:65:38	rssi: -96  	snr: 9
+
+pi@raspberrypi:~/Desktop/test_script $ iperf3 -c 192.168.200.1 -u -b 0 -t 20
+Connecting to host 192.168.200.1, port 5201
+[  5] local 192.168.200.23 port 45700 connected to 192.168.200.1 port 5201
+[ ID] Interval           Transfer     Bitrate         Total Datagrams
+[  5]   0.00-1.00   sec   113 KBytes   927 Kbits/sec  80  
+[  5]   1.00-2.00   sec  28.3 KBytes   232 Kbits/sec  20  
+[  5]   2.00-3.00   sec  42.4 KBytes   348 Kbits/sec  30  
+[  5]   3.00-4.00   sec  42.4 KBytes   348 Kbits/sec  30  
+[  5]   4.00-5.00   sec  28.3 KBytes   232 Kbits/sec  20  
+[  5]   5.00-6.00   sec  28.3 KBytes   232 Kbits/sec  20  
+[  5]   6.00-7.00   sec  28.3 KBytes   232 Kbits/sec  20  
+[  5]   7.00-8.00   sec  14.1 KBytes   116 Kbits/sec  10  
+[  5]   8.00-9.00   sec  42.4 KBytes   348 Kbits/sec  30  
+[  5]   9.00-10.00  sec  28.3 KBytes   232 Kbits/sec  20  
+[  5]  10.00-11.00  sec  14.1 KBytes   116 Kbits/sec  10  
+[  5]  11.00-12.00  sec  0.00 Bytes  0.00 bits/sec  0  
+[  5]  12.00-13.00  sec  0.00 Bytes  0.00 bits/sec  0  
+[  5]  13.00-14.00  sec  14.1 KBytes   116 Kbits/sec  10  
+[  5]  14.00-15.00  sec  0.00 Bytes  0.00 bits/sec  0  
+[  5]  15.00-16.00  sec  0.00 Bytes  0.00 bits/sec  0  
+[  5]  16.00-17.00  sec  14.1 KBytes   116 Kbits/sec  10  
+[  5]  17.00-18.00  sec  14.1 KBytes   116 Kbits/sec  10  
+[  5]  18.00-19.00  sec  14.1 KBytes   116 Kbits/sec  10  
+[  5]  19.00-20.00  sec  28.3 KBytes   232 Kbits/sec  20  
+- - - - - - - - - - - - - - - - - - - - - - - - -
+[ ID] Interval           Transfer     Bitrate         Jitter    Lost/Total Datagrams
+[  5]   0.00-20.00  sec   495 KBytes   203 Kbits/sec  0.000 ms  0/350 (0%)  sender
+[  5]   0.00-21.80  sec   448 KBytes   168 Kbits/sec  81.182 ms  33/350 (9.4%)  receiver
+

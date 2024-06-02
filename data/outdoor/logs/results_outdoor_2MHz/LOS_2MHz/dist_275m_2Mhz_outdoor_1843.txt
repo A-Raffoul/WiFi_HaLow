@@ -1,0 +1,24 @@
+test_name: dist_275m_2Mhz_outdoor_1843
+timestamp: Tue 28 May 2024 06:43:30 PM -01
+test_type: outdoor
+distance: 275
+walls: 0
+attenuation: None
+propagation: NLoS
+bandwidth: 2M
+frequency: 8640
+mcs: 0
+rate_control: on
+guard_interval: long
+tx_gain: 14
+iperf_test_length: 60
+rx_iperf_bitrate: 0.252
+tx_iperf_bitrate: 0.282
+bit_rate_per_second: [0.927, 0.232, 0.348, 0.232, 0.232, 0.232, 0.116, 0.0, 0.232, 0.463, 0.463, 0.695, 0.463, 0.232, 0.463, 0.463, 0.347, 0.347, 0.463, 0.463, 0.116, 0.116, 0.116, 0.116, 0.116, 0.232, 0.116, 0.0, 0.116, 0.0]
+receiver_lost_total_datagrams: 19/730
+jitter: 121.189
+receiver_ber: 2.6
+rssi_sequence: [-96, -95, -97, -96, -96, -97, -97, -97, -98, -98, -98, -98]
+snr_sequence: [6, 9, 9, 9, 9, 6, 6, 9, 8, 7, 7, 8]
+rssi_median: -97.0
+snr_median: 8.0

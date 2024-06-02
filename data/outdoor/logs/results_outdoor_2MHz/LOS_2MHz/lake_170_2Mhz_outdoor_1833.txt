@@ -1,0 +1,24 @@
+test_name: lake_170_2Mhz_outdoor_1833
+timestamp: Tue 28 May 2024 06:33:34 PM -01
+test_type: outdoor
+distance: 170
+walls: 0
+attenuation: None
+propagation: NLoS
+bandwidth: 2M
+frequency: 8640
+mcs: 2
+rate_control: on
+guard_interval: long
+tx_gain: 14
+iperf_test_length: 60
+rx_iperf_bitrate: 0.938
+tx_iperf_bitrate: 0.958
+bit_rate_per_second: [1.16, 0.927, 0.811, 1.16, 1.27, 1.04, 1.04, 1.16, 0.579, 0.811, 1.16, 1.16, 1.16, 1.16, 1.16, 1.04, 1.04, 1.27, 0.927, 0.927, 0.927, 0.695, 0.695, 0.695, 0.579, 0.811, 0.811, 0.695, 0.811, 1.04]
+receiver_lost_total_datagrams: 0/2480
+jitter: 17.025
+receiver_ber: 0
+rssi_sequence: [-97, -97, -99, -99, -99, -99, -99, -99, -98, -99, -99, -100]
+snr_sequence: [5, 6, 6, 6, 6, 6, 6, 6, 7, 7, 6, 4]
+rssi_median: -99.0
+snr_median: 6.0

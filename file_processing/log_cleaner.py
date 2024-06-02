@@ -124,8 +124,20 @@ def extract_wall_info(title):
     else:
         # If pattern is not found, return None
         return 0
+    
+def extract_distance(title):
+    #  Search for 'floor_x' pattern in the title
+    # print(f"Searching for wall data in: {title}")
+    match = re.search(r'dist_(\d+)', title)
+    if match:
+        # If pattern is found, return the integer value of x
+        # print(f"Wall data found: {match.group(1)}")
+        return int(match.group(1))
+    else:
+        # If pattern is not found, return None
+        return 0
 
-def create_text_data(test_name, mac_phy_data, iperf_data, signal_data, timestamp, attenuation, wall_data):
+def create_text_data(test_name, mac_phy_data, iperf_data, signal_data, timestamp, attenuation, wall_data, distance):
     mcs, bandwidth, frequency, rate_control, guard_interval, tx_gain = mac_phy_data
     iperf3_summary, bitrate_per_second = iperf_data
     rssi_values, snr_values = signal_data
@@ -135,8 +147,8 @@ def create_text_data(test_name, mac_phy_data, iperf_data, signal_data, timestamp
 
     text_data = f"""test_name: {test_name}
 timestamp: {timestamp}
-test_type: indoor
-distance: 0
+test_type: outdoor
+distance: {distance}
 walls: {wall_data}
 attenuation: {attenuation}
 propagation: NLoS
@@ -181,9 +193,10 @@ def process_log_file(log_file_path, output_dir='data'):
     signal_data = extract_signal_info(log_content)
     timestamp, attenuation = extract_timestamp_and_attenuation(log_content)
     wall_data = extract_wall_info(base_name)
+    distance = extract_distance(base_name)
     # print(f"Wall data: {type(wall_data)}")
     
-    text_data = create_text_data(base_name, mac_phy_data, iperf_data, signal_data, timestamp, attenuation, wall_data)
+    text_data = create_text_data(base_name, mac_phy_data, iperf_data, signal_data, timestamp, attenuation, wall_data, distance)
     save_to_text(text_data, base_name, output_dir)
 
 
@@ -210,6 +223,6 @@ def process_directory(log_files_dir, output_dir):
     print("Processing complete.")
 
 # Example usage
-source_directory = r'data\indoor\raw-logs\results_indoor_STA_2MHz'
-target_directory = r'data\indoor\logs\results_indoor_STA_2MHz'
+source_directory = r'data\outdoor\raw-logs\LOS_1MHz'
+target_directory = r'data\outdoor\logs\results_outdoor_1MHz'
 process_directory(source_directory, target_directory)

@@ -12,7 +12,7 @@ class Scenario:
         self.test_name = None
         self.timestamp = None
         self.test_type = None
-        self.distance = None
+        self.distance = 0
         self.walls = 0
         self.attenuation = 0
         self.propagation = 'LoS'
@@ -48,7 +48,10 @@ class Scenario:
                     elif key == 'test_type':
                         self.test_type = value
                     elif key == 'distance':
-                        self.distance = value
+                        if self.test_type == 'coaxial':
+                            self.distance = 0
+                        else:   
+                            self.distance = int(value)
                     elif key == 'walls':
                         self.walls = int(value)
                     elif key == 'attenuation':
