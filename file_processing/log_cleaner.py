@@ -137,7 +137,7 @@ def extract_distance(title):
         # If pattern is not found, return None
         return 0
 
-def create_text_data(test_name, mac_phy_data, iperf_data, signal_data, timestamp, attenuation, wall_data, distance):
+def create_text_data(test_name, mac_phy_data, iperf_data, signal_data, timestamp, attenuation, wall_data, distance, test_type):
     mcs, bandwidth, frequency, rate_control, guard_interval, tx_gain = mac_phy_data
     iperf3_summary, bitrate_per_second = iperf_data
     rssi_values, snr_values = signal_data
@@ -147,7 +147,7 @@ def create_text_data(test_name, mac_phy_data, iperf_data, signal_data, timestamp
 
     text_data = f"""test_name: {test_name}
 timestamp: {timestamp}
-test_type: outdoor
+test_type: {test_type}
 distance: {distance}
 walls: {wall_data}
 attenuation: {attenuation}
@@ -181,7 +181,7 @@ def save_to_text(text_data, test_name, output_dir):
         file.write(text_data)
     print(f"Text file created at: {text_file_path}")
 
-def process_log_file(log_file_path, output_dir='data'):
+def process_log_file(log_file_path, output_dir='data', test_type='outdoor'):
     base_name = os.path.splitext(os.path.basename(log_file_path))[0]
     
     log_content = read_log_file(log_file_path)
@@ -196,7 +196,7 @@ def process_log_file(log_file_path, output_dir='data'):
     distance = extract_distance(base_name)
     # print(f"Wall data: {type(wall_data)}")
     
-    text_data = create_text_data(base_name, mac_phy_data, iperf_data, signal_data, timestamp, attenuation, wall_data, distance)
+    text_data = create_text_data(base_name, mac_phy_data, iperf_data, signal_data, timestamp, attenuation, wall_data, distance, test_type)
     save_to_text(text_data, base_name, output_dir)
 
 
@@ -225,4 +225,5 @@ def process_directory(log_files_dir, output_dir):
 # Example usage
 source_directory = r'data\outdoor\raw-logs\LOS_1MHz'
 target_directory = r'data\outdoor\logs\results_outdoor_1MHz'
-process_directory(source_directory, target_directory)
+test_type='outdoor'
+process_directory(source_directory, target_directory, test_type)
