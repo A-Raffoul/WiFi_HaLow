@@ -4,7 +4,7 @@ Welcome to the WiFi_HaLow repository! This project is a part of a semester-long 
 This project was led by Tony Raffoul (EPFL) and Francesco Murande Escobar (EPFL) under the supervision of Prof. Andreas Burg within the Telecommunications and Circuits Lab at EPFL and the help of Mr. Herman Huni. 
 The primary focus was on characterizing the capabilities of the WiFi HaLow network under the Swiss/EU regulations.
 
-In this repository, you can also find the Presentation PowerPoint and report, as well as all the software used for the project.
+In this repository, you can also find the project report, presentation slide, as well as all the software used for the project.
 
 ## Table of Contents
 
