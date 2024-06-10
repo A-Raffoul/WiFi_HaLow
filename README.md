@@ -30,7 +30,7 @@ WiFi_HaLow is a comprehensive tool designed to handle network performance data e
 
 ## Data Extraction
 
-The first step is to process the raw test files using `log_cleaner.py`. You can configure the target and source directory and specify the test type (e.g., coaxial, outdoor, indoor). The script processes the files based on the information encoded in the file names, such as floor difference ($floor_X$) and distance ($dist_x$).
+The first step is to process the raw test files using `log_cleaner.py`. You can configure the target and source directory and specify the test type (e.g., coaxial, outdoor, indoor). The script processes the files based on the information encoded in the file names, such as floor difference (floor_x) and distance (dist_x).
 
 The raw log files are transformed into easier-to-process text files. Below is an example of a typical processed log file:
 
