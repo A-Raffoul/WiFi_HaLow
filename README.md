@@ -4,7 +4,7 @@ Welcome to the WiFi_HaLow repository! This project is a part of a semester-long 
 This project was led by Tony Raffoul (EPFL) and Francesco Murande Escobar (EPFL) under the supervision of Prof. Andreas Burg within the Telecommunications and Circuits Lab at EPFL and the help of Mr. Herman Huni. 
 The primary focus was on characterizing the capabilities of the WiFi HaLow network under the Swiss/EU regulations.
 
-In this repository, you can also find the Presentation PowerPoint and report, as well as all the software used for the project.
+In this repository, you can also find the project report, presentation slide, as well as all the software used for the project.
 
 ## Table of Contents
 
@@ -30,7 +30,7 @@ WiFi_HaLow is a comprehensive tool designed to handle network performance data e
 
 ## Data Extraction
 
-The first step is to process the raw test files using `log_cleaner.py`. You can configure the target and source directory and specify the test type (e.g., coaxial, outdoor, indoor). The script processes the files based on the information encoded in the file names, such as floor difference ($floor_X$) and distance ($dist_x$).
+The first step is to process the raw test files using `log_cleaner.py`. You can configure the target and source directory and specify the test type (e.g., coaxial, outdoor, indoor). The script processes the files based on the information encoded in the file names, such as floor difference (floor_x) and distance (dist_x).
 
 The raw log files are transformed into easier-to-process text files. Below is an example of a typical processed log file:
 
