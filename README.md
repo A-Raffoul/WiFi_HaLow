@@ -70,3 +70,6 @@ The processed text files are then handled by `scenario.py`, which defines the `S
 
 We provide an example notebook, `data_visualization.ipynb`, which demonstrates the typical use of the library. This notebook was used to create most of the graphs during the course of this project. It serves as a practical guide for visualizing the network performance metrics and gaining insights from the data.
 
+### Contact
+
+Tony Raffoul | traffoul@student.ethz.ch
